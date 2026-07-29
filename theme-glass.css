@@ -119,10 +119,6 @@
   border-radius: 2px;
 }
 
-[data-theme="glass"] .hero-foot {
-  border-top-color: rgba(29, 32, 51, 0.14);
-}
-
 /* Buttons: pill-shaped glass ------------------------------------------------ */
 [data-theme="glass"] .btn {
   border-radius: 999px;
@@ -141,7 +137,7 @@
 }
 
 /* Sections: frosted cards ----------------------------------------------------- */
-[data-theme="glass"] .experience,
+[data-theme="glass"] .extracurriculars,
 [data-theme="glass"] .hobbies {
   background: transparent;
 }

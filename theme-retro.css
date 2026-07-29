@@ -107,10 +107,6 @@
   height: 2px;
 }
 
-[data-theme="retro"] .hero-foot {
-  border-top-color: var(--line);
-}
-
 /* Buttons ---------------------------------------------------------------------- */
 [data-theme="retro"] .btn-terra {
   background: var(--terra);
@@ -124,7 +120,7 @@
 }
 
 /* Sections ------------------------------------------------------------------------- */
-[data-theme="retro"] .experience,
+[data-theme="retro"] .extracurriculars,
 [data-theme="retro"] .hobbies {
   background: transparent;
 }
