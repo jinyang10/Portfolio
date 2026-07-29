@@ -122,6 +122,24 @@
     sections.forEach((section) => sectionObserver.observe(section));
   }
 
+  /* Theme switching ------------------------------------------------------- */
+  const themeButtons = document.querySelectorAll("[data-theme-btn]");
+  const applyTheme = (theme) => {
+    document.documentElement.dataset.theme = theme;
+    try {
+      localStorage.setItem("theme", theme);
+    } catch (_) {
+      /* storage unavailable (private mode); theme still applies */
+    }
+    themeButtons.forEach((btn) => {
+      btn.classList.toggle("is-active", btn.dataset.themeBtn === theme);
+    });
+  };
+  themeButtons.forEach((btn) => {
+    btn.addEventListener("click", () => applyTheme(btn.dataset.themeBtn));
+  });
+  applyTheme(document.documentElement.dataset.theme || "luxury");
+
   /* Footer details -------------------------------------------------------- */
   const year = String(new Date().getFullYear());
   document.querySelectorAll("[data-year]").forEach((el) => {

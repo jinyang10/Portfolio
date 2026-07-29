@@ -21,10 +21,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Outfit:wght@200;300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Outfit:wght@200;300;400;500&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=5" />
+    <link rel="stylesheet" href="styles.css?v=6" />
+    <link rel="stylesheet" href="theme-modernist.css?v=6" />
+    <!--
+      Site style. Two themes are available:
+        "luxury"    — warm, editorial, serif (default)
+        "modernist" — clean lines, functional beauty, timeless
+      Visitors can switch with the toggle in the header (saved in their
+      browser). To change the DEFAULT theme, edit the fallback below.
+    -->
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem("theme") || "luxury";
+    </script>
   </head>
   <body>
     <div class="grain" aria-hidden="true"></div>
@@ -43,6 +55,11 @@
         <a href="#hobbies" data-nav="hobbies">Hobbies</a>
         <a class="nav-cta" href="#contact" data-nav="contact">Contact</a>
       </nav>
+      <div class="theme-toggle" role="group" aria-label="Site style">
+        <button type="button" data-theme-btn="luxury">Luxe</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" data-theme-btn="modernist">Modern</button>
+      </div>
       <button
         class="menu-toggle"
         type="button"
@@ -339,6 +356,6 @@
       </section>
     </main>
 
-    <script src="script.js?v=5"></script>
+    <script src="script.js?v=6"></script>
   </body>
 </html>

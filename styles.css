@@ -110,7 +110,7 @@ button {
   z-index: 44;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: clamp(1rem, 2.5vw, 2rem);
   height: var(--header-h);
   padding: 0 clamp(1.25rem, 4vw, 3.5rem);
   border-bottom: 1px solid transparent;
@@ -171,6 +171,7 @@ button {
   display: flex;
   align-items: center;
   gap: clamp(1rem, 2.2vw, 2rem);
+  margin-left: auto;
 }
 
 .nav a {
@@ -218,6 +219,42 @@ button {
 
 .nav-cta:hover {
   color: var(--terra);
+}
+
+/* Theme toggle -------------------------------------------------------- */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+.theme-toggle span {
+  opacity: 0.35;
+}
+
+.theme-toggle button {
+  padding: 0.3rem 0.1rem;
+  opacity: 0.55;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  font-size: inherit;
+  border-bottom: 1px solid transparent;
+  transition: opacity 0.3s var(--ease), color 0.3s var(--ease),
+    border-color 0.3s var(--ease);
+}
+
+.theme-toggle button:hover {
+  opacity: 1;
+}
+
+.theme-toggle button.is-active {
+  opacity: 1;
+  color: var(--terra);
+  border-bottom-color: var(--terra);
 }
 
 /* Mobile menu -------------------------------------------------------- */
@@ -988,6 +1025,10 @@ button {
 @media (max-width: 960px) {
   .nav {
     display: none;
+  }
+
+  .theme-toggle {
+    margin-left: auto;
   }
 
   .menu-toggle {
