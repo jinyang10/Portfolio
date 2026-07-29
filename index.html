@@ -3,99 +3,140 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jin Yang — Meridian</title>
+    <title>Jin Yang — Meridian, A Private Studio Practice</title>
     <meta
       name="description"
-      content="Jin Yang — Meridian. A personal atelier for thoughtful technology, research, and refined creative practice."
+      content="Meridian is the private studio practice of Jin Yang — thoughtful technology, research, and craft, presented as one quiet, considered scrolling experience."
+    />
+    <meta property="og:title" content="Jin Yang — Meridian" />
+    <meta
+      property="og:description"
+      content="A private studio practice for considered software. Fewer elements, chosen deeply."
+    />
+    <meta property="og:type" content="website" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f4f0e9'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23a3512f'/%3E%3C/svg%3E"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Outfit:wght@200;300;400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="grain" aria-hidden="true"></div>
+    <div class="progress" aria-hidden="true"><span data-progress></span></div>
 
     <header class="site-header" data-header>
-      <a class="brand" href="#home" aria-label="Jin Yang — Meridian">
+      <a class="brand" href="#home" aria-label="Meridian — Jin Yang, back to top">
         <span class="brand-mark" aria-hidden="true"></span>
-        <span class="brand-text">Jin Yang</span>
+        <span class="brand-text">Meridian<em>&nbsp;·&nbsp;Jin Yang</em></span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="#home">Home</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#projects">Projects</a>
-        <a href="#hobbies">Hobbies</a>
-        <a class="nav-cta" href="#contact">Contact</a>
+        <a href="#home" data-nav="home">Home</a>
+        <a href="#experience" data-nav="experience">Experience</a>
+        <a href="#education" data-nav="education">Education</a>
+        <a href="#projects" data-nav="projects">Projects</a>
+        <a href="#hobbies" data-nav="hobbies">Hobbies</a>
+        <a class="nav-cta" href="#contact" data-nav="contact">Contact</a>
       </nav>
-      <button class="menu-toggle" type="button" aria-label="Open menu" data-menu-toggle>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        data-menu-toggle
+      >
         <span></span>
         <span></span>
       </button>
     </header>
 
     <div class="mobile-nav" data-mobile-nav hidden>
-      <a href="#home">Home</a>
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#projects">Projects</a>
-      <a href="#hobbies">Hobbies</a>
-      <a href="#contact">Contact</a>
+      <nav aria-label="Mobile">
+        <a href="#home"><small>00</small>Home</a>
+        <a href="#experience"><small>01</small>Experience</a>
+        <a href="#education"><small>02</small>Education</a>
+        <a href="#projects"><small>03</small>Projects</a>
+        <a href="#hobbies"><small>04</small>Hobbies</a>
+        <a href="#contact"><small>05</small>Contact</a>
+      </nav>
+      <p class="mobile-nav-foot">Toronto · sjy6@my.yorku.ca</p>
     </div>
 
-    <main>
-      <!-- 1. Home -->
-      <section class="hero" id="home">
+    <main id="top">
+      <!-- 01 · Home -->
+      <section class="hero" id="home" data-section="home">
         <div class="hero-media" aria-hidden="true">
           <img
             src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=80"
             alt=""
             class="hero-image"
+            data-hero-image
           />
           <div class="hero-veil"></div>
         </div>
+
         <div class="hero-content">
-          <p class="hero-atelier reveal">Meridian Atelier</p>
-          <h1 class="hero-brand reveal" style="--d: 0.08s">Jin Yang</h1>
-          <p class="hero-title reveal" style="--d: 0.18s">
-            Quiet precision<br />
-            for complex ideas.
+          <p class="hero-kicker reveal">
+            <span class="kicker-line" aria-hidden="true"></span>
+            Meridian — a private studio practice
           </p>
-          <p class="hero-lede reveal" style="--d: 0.28s">
-            A personal atelier where technology, research, and craft meet —
-            fewer elements, considered deeply.
+          <h1 class="hero-name reveal" style="--d: 0.1s">Jin&nbsp;Yang</h1>
+          <p class="hero-statement reveal" style="--d: 0.22s">
+            Quiet precision,<br />
+            <em>for complex ideas.</em>
           </p>
-          <div class="hero-actions reveal" style="--d: 0.4s">
-            <a class="btn btn-primary" href="#projects">View selected work</a>
-            <a class="btn btn-ghost" href="#contact">Begin a conversation</a>
+          <p class="hero-lede reveal" style="--d: 0.34s">
+            Technology, research, and craft — composed like a gallery:
+            fewer elements, chosen deeply, arranged with care.
+          </p>
+          <div class="hero-actions reveal" style="--d: 0.46s">
+            <a class="btn btn-light" href="#projects">View selected work</a>
+            <a class="btn btn-outline-light" href="#contact">Begin a conversation</a>
           </div>
         </div>
-        <a class="scroll-cue" href="#experience" aria-label="Scroll to experience">
-          <span>Scroll</span>
-          <i></i>
-        </a>
+
+        <div class="hero-foot reveal" style="--d: 0.6s">
+          <span>Toronto, Canada</span>
+          <a class="scroll-cue" href="#experience" aria-label="Scroll to experience">
+            Scroll<i aria-hidden="true"></i>
+          </a>
+          <span>Portfolio, <span data-year>2026</span></span>
+        </div>
       </section>
 
-      <!-- 2. Experience -->
-      <section class="section experience" id="experience">
+      <!-- Manifesto interlude -->
+      <section class="manifesto" aria-label="Studio ethos">
         <div class="section-inner">
-          <div class="section-head reveal">
-            <p class="eyebrow">Experience</p>
+          <p class="manifesto-text reveal">
+            The studio holds one belief:&nbsp;that restraint is not absence —
+            it is <em class="tint-terra">attention</em>, placed exactly
+            <em class="tint-forest">where it matters.</em>
+          </p>
+          <div class="manifesto-rule reveal" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <!-- 02 · Experience -->
+      <section class="section experience" id="experience" data-section="experience">
+        <div class="section-inner">
+          <header class="section-head reveal">
+            <p class="chapter"><span>01</span>Experience</p>
             <h2>Work shaped by calm rigor.</h2>
             <p class="section-copy">
-              Roles and collaborations that rewarded clarity — turning ambiguity
-              into structure without losing elegance.
+              Roles and collaborations that rewarded clarity — turning
+              ambiguity into structure without losing elegance.
             </p>
-          </div>
+          </header>
 
           <ol class="timeline">
             <li class="timeline-item reveal">
               <div class="timeline-meta">
-                <span class="accent-dot" aria-hidden="true"></span>
+                <span class="accent-dot dot-terra" aria-hidden="true"></span>
                 <time>2025 — Present</time>
               </div>
               <div class="timeline-body">
@@ -103,14 +144,14 @@
                 <p class="role">Independent Practice · Meridian</p>
                 <p>
                   Designing thoughtful digital experiences and tooling with an
-                  emphasis on restraint, accessibility, and long-term usefulness
-                  over spectacle.
+                  emphasis on restraint, accessibility, and long-term
+                  usefulness over spectacle.
                 </p>
               </div>
             </li>
-            <li class="timeline-item reveal">
+            <li class="timeline-item reveal" style="--d: 0.08s">
               <div class="timeline-meta">
-                <span class="accent-dot" aria-hidden="true"></span>
+                <span class="accent-dot dot-forest" aria-hidden="true"></span>
                 <time>2023 — 2025</time>
               </div>
               <div class="timeline-body">
@@ -123,18 +164,18 @@
                 </p>
               </div>
             </li>
-            <li class="timeline-item reveal">
+            <li class="timeline-item reveal" style="--d: 0.16s">
               <div class="timeline-meta">
-                <span class="accent-dot" aria-hidden="true"></span>
+                <span class="accent-dot dot-gold" aria-hidden="true"></span>
                 <time>2022 — 2024</time>
               </div>
               <div class="timeline-body">
                 <h3>Software Development Intern</h3>
                 <p class="role">Technology Studio</p>
                 <p>
-                  Built and refined web interfaces with attention to performance,
-                  typography, and interaction detail — treating every screen as
-                  a composed environment.
+                  Built and refined web interfaces with attention to
+                  performance, typography, and interaction detail — treating
+                  every screen as a composed environment.
                 </p>
               </div>
             </li>
@@ -142,37 +183,37 @@
         </div>
       </section>
 
-      <!-- 3. Education -->
-      <section class="section education" id="education">
-        <div class="section-inner education-grid">
-          <div class="section-head reveal">
-            <p class="eyebrow">Education</p>
-            <h2>Foundations with editorial discipline.</h2>
+      <!-- 03 · Education -->
+      <section class="section education" id="education" data-section="education">
+        <div class="section-inner">
+          <header class="section-head reveal">
+            <p class="chapter"><span>02</span>Education</p>
+            <h2>Foundations, held with editorial discipline.</h2>
             <p class="section-copy">
               Formal study as a framework for curiosity — technical fluency
               paired with judgment about what deserves attention.
             </p>
-          </div>
+          </header>
 
           <div class="edu-panel reveal" style="--d: 0.1s">
             <div class="edu-visual" aria-hidden="true">
               <img
                 src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1600&q=80"
                 alt=""
+                loading="lazy"
               />
             </div>
             <div class="edu-content">
-              <p class="edu-school">York University</p>
-              <h3>Bachelor of Science</h3>
-              <p class="edu-detail">Computer Science · Toronto</p>
-              <p>
-                Coursework spanning algorithms, human-computer interaction, and
-                software design — oriented toward systems that feel inevitable
-                once complete.
+              <p class="edu-school">York University · Toronto</p>
+              <h3>Bachelor of Science,<br />Computer Science</h3>
+              <p class="edu-detail">
+                Coursework spanning algorithms, human-computer interaction,
+                and software design — oriented toward systems that feel
+                inevitable once complete.
               </p>
               <ul class="edu-tags">
                 <li>Systems Design</li>
-                <li>HCI</li>
+                <li>Human-Computer Interaction</li>
                 <li>Data Structures</li>
                 <li>Web Architecture</li>
               </ul>
@@ -181,27 +222,27 @@
         </div>
       </section>
 
-      <!-- 4. Projects -->
-      <section class="section projects" id="projects">
+      <!-- 04 · Projects -->
+      <section class="section projects" id="projects" data-section="projects">
         <div class="section-inner">
-          <div class="section-head reveal">
-            <p class="eyebrow">Projects</p>
+          <header class="section-head reveal">
+            <p class="chapter"><span>03</span>Projects</p>
             <h2>Selected work, distilled.</h2>
             <p class="section-copy">
-              A short gallery of ideas brought into form — each one chosen for
-              clarity of purpose rather than volume.
+              A short gallery of ideas brought into form — each one chosen
+              for clarity of purpose rather than volume.
             </p>
-          </div>
+          </header>
 
           <div class="project-list">
             <article class="project reveal">
-              <div class="project-index">01</div>
+              <div class="project-index" aria-hidden="true">01</div>
               <div class="project-main">
                 <h3>Atlas Ledger</h3>
                 <p>
-                  A calm personal finance interface that replaces dashboard noise
-                  with intentional pacing — soft transitions, honest numbers, and
-                  space to think.
+                  A calm personal finance interface that replaces dashboard
+                  noise with intentional pacing — soft transitions, honest
+                  numbers, and space to think.
                 </p>
               </div>
               <ul class="project-meta">
@@ -210,14 +251,14 @@
               </ul>
             </article>
 
-            <article class="project reveal">
-              <div class="project-index">02</div>
+            <article class="project reveal" style="--d: 0.08s">
+              <div class="project-index" aria-hidden="true">02</div>
               <div class="project-main">
                 <h3>Gallery Path</h3>
                 <p>
                   An exhibition-inspired portfolio system with scroll-linked
-                  reveals and material textures — inspired by contemporary museum
-                  pacing and private lounges.
+                  reveals and material textures — paced like a contemporary
+                  museum, lit like a private lounge.
                 </p>
               </div>
               <ul class="project-meta">
@@ -226,14 +267,14 @@
               </ul>
             </article>
 
-            <article class="project reveal">
-              <div class="project-index">03</div>
+            <article class="project reveal" style="--d: 0.16s">
+              <div class="project-index" aria-hidden="true">03</div>
               <div class="project-main">
                 <h3>Signal Notes</h3>
                 <p>
-                  A research capture tool for academic writing: sparse UI, strong
-                  typography, and frictionless linking between sources, claims,
-                  and drafts.
+                  A research capture tool for academic writing: sparse
+                  interface, strong typography, and frictionless linking
+                  between sources, claims, and drafts.
                 </p>
               </div>
               <ul class="project-meta">
@@ -245,43 +286,56 @@
         </div>
       </section>
 
-      <!-- 5. Hobbies -->
-      <section class="section hobbies" id="hobbies">
+      <!-- Pull-quote interlude -->
+      <section class="quote" aria-label="Guiding principle">
         <div class="section-inner">
-          <div class="section-head reveal">
-            <p class="eyebrow">Hobbies</p>
+          <blockquote class="reveal">
+            <p>“Nothing rushed.<br />Nothing accidental.”</p>
+            <cite>— the working principle behind every piece above</cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- 05 · Hobbies -->
+      <section class="section hobbies" id="hobbies" data-section="hobbies">
+        <div class="section-inner">
+          <header class="section-head reveal">
+            <p class="chapter"><span>04</span>Hobbies</p>
             <h2>What restores attention.</h2>
             <p class="section-copy">
               Outside of work, practice continues in quieter forms — where
               proportion, patience, and atmosphere matter most.
             </p>
-          </div>
+          </header>
 
           <div class="hobby-mosaic">
             <figure class="hobby reveal">
               <img
-                src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?auto=format&fit=crop&w=1200&q=80"
-                alt="Open book and soft light on a desk"
+                src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1200&q=80"
+                alt="A quiet library aisle lit by warm hanging bulbs"
+                loading="lazy"
               />
               <figcaption>
                 <h3>Reading</h3>
                 <p>Design essays, architecture, and slow fiction.</p>
               </figcaption>
             </figure>
-            <figure class="hobby hobby-accent reveal" style="--d: 0.08s">
+            <figure class="hobby hobby-lift reveal" style="--d: 0.1s">
               <img
-                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"
-                alt="Minimal landscape path through misty hills"
+                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80"
+                alt="A quiet path through a sunlit forest"
+                loading="lazy"
               />
               <figcaption>
                 <h3>Walking</h3>
                 <p>Unhurried routes that reset perspective.</p>
               </figcaption>
             </figure>
-            <figure class="hobby reveal" style="--d: 0.16s">
+            <figure class="hobby reveal" style="--d: 0.2s">
               <img
-                src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1200&q=80"
-                alt="Vinyl and warm listening space"
+                src="https://images.unsplash.com/photo-1461360228754-6e81c478b882?auto=format&fit=crop&w=1200&q=80"
+                alt="A turntable playing a vinyl record"
+                loading="lazy"
               />
               <figcaption>
                 <h3>Listening</h3>
@@ -292,38 +346,46 @@
         </div>
       </section>
 
-      <!-- Contact / Closing -->
-      <section class="section contact" id="contact">
+      <!-- 06 · Contact / Closing -->
+      <section class="contact" id="contact" data-section="contact">
         <div class="section-inner contact-inner">
-          <div class="contact-panel reveal">
-            <p class="eyebrow">Contact</p>
-            <h2>When you are ready, write.</h2>
-            <p class="section-copy">
-              For collaborations, opportunities, or a considered conversation —
-              reach out directly. Responses are thoughtful, not hurried.
-            </p>
-            <div class="contact-actions">
-              <a class="btn btn-primary" href="mailto:sjy6@my.yorku.ca">sjy6@my.yorku.ca</a>
-              <a
-                class="btn btn-ghost"
-                href="https://www.linkedin.com/in/jin-yang-aa7352301/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LinkedIn
-              </a>
-            </div>
+          <p class="chapter chapter-light reveal"><span>05</span>Contact</p>
+          <h2 class="contact-title reveal" style="--d: 0.08s">
+            When you are ready,<br /><em>write.</em>
+          </h2>
+          <p class="contact-copy reveal" style="--d: 0.16s">
+            For collaborations, opportunities, or a considered conversation —
+            reach out directly. Every note is read with care.
+          </p>
+          <a
+            class="contact-mail reveal"
+            style="--d: 0.24s"
+            href="mailto:sjy6@my.yorku.ca"
+          >
+            sjy6@my.yorku.ca
+          </a>
+          <div class="contact-actions reveal" style="--d: 0.32s">
+            <a class="btn btn-terra" href="mailto:sjy6@my.yorku.ca">Send an email</a>
+            <a
+              class="btn btn-outline-light"
+              href="https://www.linkedin.com/in/jin-yang-aa7352301/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn ↗
+            </a>
           </div>
         </div>
+
+        <footer class="site-footer">
+          <div class="footer-inner">
+            <p class="footer-brand">Meridian · Jin Yang</p>
+            <p class="footer-local">Toronto — <span data-local-time>—:—</span> local</p>
+            <p class="footer-note">© <span data-year>2026</span> · Crafted with quiet intention.</p>
+          </div>
+        </footer>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <p class="footer-brand">Meridian · Jin Yang</p>
-        <p class="footer-note">Crafted with quiet intention.</p>
-      </div>
-    </footer>
 
     <script src="script.js"></script>
   </body>
