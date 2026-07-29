@@ -9,8 +9,8 @@
 1. **Home** — a calm opening welcome and introduction
 2. **Experience** — a refined timeline of work
 3. **Education** — Computer Engineering at York University, Lassonde
-4. **Projects** — selected work, distilled
-5. **Hobbies** — what restores attention
+4. **Projects** — selected work
+5. **Hobbies** — fitness & health, gaming, and technology
 6. **Contact** — a dark closing movement with email & LinkedIn
 
 ## Contact
