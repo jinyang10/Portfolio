@@ -122,11 +122,6 @@
   height: 2px;
 }
 
-[data-theme="modernist"] .hero-foot {
-  border-top-width: 2px;
-  border-top-color: var(--ink);
-}
-
 /* Buttons ----------------------------------------------------------------- */
 [data-theme="modernist"] .btn {
   font-weight: 500;
@@ -143,7 +138,7 @@
 }
 
 /* Sections ------------------------------------------------------------------ */
-[data-theme="modernist"] .experience {
+[data-theme="modernist"] .extracurriculars {
   background: transparent;
 }
 

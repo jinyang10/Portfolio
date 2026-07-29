@@ -97,10 +97,6 @@
   background: var(--terra);
 }
 
-[data-theme="artdeco"] .hero-foot {
-  border-top-color: var(--line);
-}
-
 /* Buttons --------------------------------------------------------------------- */
 [data-theme="artdeco"] .btn-terra {
   background: linear-gradient(135deg, #e6c968, #b48c3c);
@@ -114,7 +110,7 @@
 }
 
 /* Sections ----------------------------------------------------------------------- */
-[data-theme="artdeco"] .experience,
+[data-theme="artdeco"] .extracurriculars,
 [data-theme="artdeco"] .hobbies {
   background: transparent;
 }
