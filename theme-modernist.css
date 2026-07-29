@@ -1,0 +1,281 @@
+/* ------------------------------------------------------------------
+   Modernist theme — clean lines, functional beauty, timeless.
+   Applied when <html data-theme="modernist">. Swiss-inspired: flat
+   white surfaces, grotesque typography, sharp geometry, and primary
+   accents (blue, red, yellow) used sparingly.
+------------------------------------------------------------------- */
+
+[data-theme="modernist"] {
+  --ink: #101012;
+  --ink-soft: #3a3a3e;
+  --muted: #6f6f75;
+  --paper: #f6f6f4;
+  --paper-warm: #fafaf8;
+  --paper-deep: #ececea;
+  --night: #0b0b0d;
+  --night-soft: #131316;
+  --line: rgba(16, 16, 18, 0.14);
+  --line-light: rgba(255, 255, 255, 0.16);
+  --terra: #002fa7; /* primary accent: International Klein Blue */
+  --terra-deep: #00227a;
+  --forest: #d21f26; /* secondary accent: modernist red */
+  --gold: #f2a900; /* tertiary accent: modernist yellow */
+  --cream: #f4f4f2;
+  --font-display: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Surfaces ----------------------------------------------------------- */
+[data-theme="modernist"] body {
+  background: var(--paper);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.65;
+}
+
+[data-theme="modernist"] .grain {
+  display: none;
+}
+
+[data-theme="modernist"] ::selection {
+  background: rgba(0, 47, 167, 0.18);
+}
+
+[data-theme="modernist"] .progress span {
+  background: var(--terra);
+}
+
+/* Typography --------------------------------------------------------- */
+[data-theme="modernist"] .hero-name,
+[data-theme="modernist"] .section h2,
+[data-theme="modernist"] .timeline-body h3,
+[data-theme="modernist"] .project-main h3,
+[data-theme="modernist"] .edu-main h3,
+[data-theme="modernist"] .hobby h3,
+[data-theme="modernist"] .contact-title {
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+[data-theme="modernist"] .hero-name em,
+[data-theme="modernist"] .contact-title em {
+  font-style: normal;
+  font-weight: 600;
+}
+
+[data-theme="modernist"] .hero-name em {
+  color: var(--terra);
+}
+
+[data-theme="modernist"] .hero-name {
+  line-height: 1.02;
+}
+
+[data-theme="modernist"] .hero-lede {
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+
+[data-theme="modernist"] .chapter span,
+[data-theme="modernist"] .project-index,
+[data-theme="modernist"] .footer-brand,
+[data-theme="modernist"] .brand-text,
+[data-theme="modernist"] .contact-mail,
+[data-theme="modernist"] .hobbies .section-copy {
+  font-style: normal;
+}
+
+/* Header -------------------------------------------------------------- */
+[data-theme="modernist"] .site-header.is-scrolled {
+  background: rgba(250, 250, 248, 0.88);
+  border-bottom-color: rgba(16, 16, 18, 0.16);
+}
+
+[data-theme="modernist"] .brand-mark {
+  border-radius: 0;
+  background: var(--terra);
+  box-shadow: none;
+}
+
+[data-theme="modernist"] .brand-text {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-size: 1.15rem;
+}
+
+[data-theme="modernist"] .nav a::after {
+  height: 2px;
+}
+
+[data-theme="modernist"] .mobile-nav {
+  background: rgba(250, 250, 248, 0.98);
+}
+
+[data-theme="modernist"] .mobile-nav a {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* Hero ------------------------------------------------------------------ */
+[data-theme="modernist"] .kicker-line {
+  background: var(--terra);
+  height: 2px;
+}
+
+[data-theme="modernist"] .hero-foot {
+  border-top-width: 2px;
+  border-top-color: var(--ink);
+}
+
+/* Buttons ----------------------------------------------------------------- */
+[data-theme="modernist"] .btn {
+  font-weight: 500;
+}
+
+[data-theme="modernist"] .btn-terra {
+  background: var(--terra);
+  color: #fff;
+}
+
+[data-theme="modernist"] .btn-terra:hover {
+  background: var(--terra-deep);
+  box-shadow: 0 12px 30px rgba(0, 47, 167, 0.3);
+}
+
+/* Sections ------------------------------------------------------------------ */
+[data-theme="modernist"] .experience {
+  background: transparent;
+}
+
+[data-theme="modernist"] .timeline {
+  border-top: 2px solid var(--ink);
+}
+
+[data-theme="modernist"] .timeline-item:hover {
+  background: rgba(0, 47, 167, 0.035);
+}
+
+[data-theme="modernist"] .accent-dot {
+  border-radius: 0;
+}
+
+[data-theme="modernist"] .dot-terra {
+  background: var(--terra);
+  box-shadow: none;
+}
+
+[data-theme="modernist"] .dot-forest {
+  background: var(--forest);
+  box-shadow: none;
+}
+
+[data-theme="modernist"] .dot-gold {
+  background: var(--gold);
+  box-shadow: none;
+}
+
+[data-theme="modernist"] .edu-panel {
+  background: #fff;
+  border-color: rgba(16, 16, 18, 0.16);
+}
+
+[data-theme="modernist"] .project-list {
+  border-top: 2px solid var(--ink);
+}
+
+[data-theme="modernist"] .project:hover {
+  background: rgba(0, 47, 167, 0.035);
+}
+
+[data-theme="modernist"] .project-index {
+  font-weight: 600;
+  color: var(--terra);
+}
+
+[data-theme="modernist"] .hobbies {
+  background: transparent;
+}
+
+[data-theme="modernist"] .hobbies .section-copy {
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.4;
+}
+
+[data-theme="modernist"] .hobby img {
+  filter: saturate(0.95) contrast(1.02);
+}
+
+[data-theme="modernist"] .hobby-lift {
+  transform: none;
+}
+
+[data-theme="modernist"] .hobby-lift.reveal {
+  transform: translateY(30px);
+}
+
+[data-theme="modernist"] .hobby-lift.reveal.is-in {
+  transform: none;
+}
+
+/* Contact / closing ------------------------------------------------------------- */
+[data-theme="modernist"] .contact {
+  background: radial-gradient(760px 460px at 85% 0%, rgba(0, 47, 167, 0.3), transparent 55%),
+    linear-gradient(180deg, var(--night-soft), var(--night));
+  color: #f2f2f0;
+}
+
+[data-theme="modernist"] .chapter-light {
+  color: #7f9dff;
+}
+
+[data-theme="modernist"] .chapter-light span {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+[data-theme="modernist"] .contact-title {
+  color: #ffffff;
+}
+
+[data-theme="modernist"] .contact-title em {
+  color: #7f9dff;
+}
+
+[data-theme="modernist"] .contact-copy {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+[data-theme="modernist"] .contact-mail {
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  border-bottom: 2px solid #7f9dff;
+}
+
+[data-theme="modernist"] .contact-mail:hover {
+  color: #7f9dff;
+  border-color: #ffffff;
+}
+
+[data-theme="modernist"] .btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.95);
+}
+
+[data-theme="modernist"] .btn-outline-light:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="modernist"] .site-footer {
+  border-top-color: rgba(255, 255, 255, 0.16);
+}
+
+[data-theme="modernist"] .footer-inner {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+[data-theme="modernist"] .footer-brand {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+}

@@ -18,6 +18,31 @@
 - Email: [sjy6@my.yorku.ca](mailto:sjy6@my.yorku.ca)
 - LinkedIn: [jin-yang-aa7352301](https://www.linkedin.com/in/jin-yang-aa7352301/)
 
+## Switching styles
+
+The site ships with two complete visual themes:
+
+- **Luxury** (default) — warm gallery-paper palette, editorial serif
+  typography, terracotta/forest/gold accents
+- **Modernist** — clean lines, functional beauty, timeless: flat white
+  surfaces, Space Grotesk + Inter typography, sharp geometry, and primary
+  blue/red/yellow accents
+
+Two ways to switch:
+
+1. **On the site** — use the `Luxe / Modern` toggle in the header. The choice
+   is saved in the visitor's browser and persists across visits.
+2. **Change the default** — in `index.html`, find the small script in the
+   `<head>` and change the fallback:
+
+   ```js
+   document.documentElement.dataset.theme =
+     localStorage.getItem("theme") || "luxury"; // change to "modernist"
+   ```
+
+All Modernist styling lives in `theme-modernist.css` as overrides, so the
+shared layout and content stay in one place (`index.html` + `styles.css`).
+
 ## Design notes
 
 - Warm gallery-paper palette with restrained accents of terracotta, forest
