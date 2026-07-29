@@ -6,9 +6,9 @@
 
 ## Sections
 
-1. **Home** — full-bleed opening statement with gentle parallax
+1. **Home** — a calm opening welcome and introduction
 2. **Experience** — a refined timeline of work
-3. **Education** — York University foundations
+3. **Education** — Computer Engineering at York University, Lassonde
 4. **Projects** — selected work, distilled
 5. **Hobbies** — what restores attention
 6. **Contact** — a dark closing movement with email & LinkedIn
