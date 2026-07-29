@@ -20,28 +20,37 @@
 
 ## Switching styles
 
-The site ships with two complete visual themes:
+The site ships with five complete visual themes:
 
 - **Luxury** (default) — warm gallery-paper palette, editorial serif
   typography, terracotta/forest/gold accents
 - **Modernist** — clean lines, functional beauty, timeless: flat white
   surfaces, Space Grotesk + Inter typography, sharp geometry, and primary
   blue/red/yellow accents
+- **Art Deco** — elegant patterns, luxury, vintage sophistication: charcoal
+  surfaces, champagne gold, Cinzel roman capitals, sunburst geometry, and
+  diamond markers
+- **Retro-Future** — an 80s vision of the future, refined nostalgia: indigo
+  night, restrained neon magenta/cyan, Orbitron display type, soft glows
+- **Glass** — translucent layers, blurred backgrounds, depth: a soft mesh
+  gradient behind frosted panels, rounded geometry, indigo/pink accents
 
 Two ways to switch:
 
-1. **On the site** — use the `Luxe / Modern` toggle in the header. The choice
-   is saved in the visitor's browser and persists across visits.
+1. **On the site** — use the `Style` picker in the header. The choice is
+   saved in the visitor's browser and persists across visits.
 2. **Change the default** — in `index.html`, find the small script in the
    `<head>` and change the fallback:
 
    ```js
    document.documentElement.dataset.theme =
-     localStorage.getItem("theme") || "luxury"; // change to "modernist"
+     localStorage.getItem("theme") || "luxury";
+   // change "luxury" to "modernist", "artdeco", "retro", or "glass"
    ```
 
-All Modernist styling lives in `theme-modernist.css` as overrides, so the
-shared layout and content stay in one place (`index.html` + `styles.css`).
+Each theme lives in its own override stylesheet (`theme-modernist.css`,
+`theme-artdeco.css`, `theme-retro.css`, `theme-glass.css`), so the shared
+layout and content stay in one place (`index.html` + `styles.css`).
 
 ## Design notes
 

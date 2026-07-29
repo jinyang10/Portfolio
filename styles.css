@@ -221,40 +221,61 @@ button {
   color: var(--terra);
 }
 
-/* Theme toggle -------------------------------------------------------- */
-.theme-toggle {
+/* Theme picker -------------------------------------------------------- */
+.theme-picker {
+  position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.55rem;
   font-size: 0.68rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: inherit;
+  cursor: pointer;
 }
 
-.theme-toggle span {
-  opacity: 0.35;
+.theme-picker-label {
+  opacity: 0.5;
 }
 
-.theme-toggle button {
-  padding: 0.3rem 0.1rem;
-  opacity: 0.55;
+.theme-picker select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  color: var(--terra);
+  font: inherit;
   letter-spacing: inherit;
   text-transform: inherit;
-  font-size: inherit;
-  border-bottom: 1px solid transparent;
-  transition: opacity 0.3s var(--ease), color 0.3s var(--ease),
-    border-color 0.3s var(--ease);
+  padding: 0.3rem 1.1rem 0.3rem 0;
+  cursor: pointer;
 }
 
-.theme-toggle button:hover {
-  opacity: 1;
+.theme-picker select:focus-visible {
+  outline: 1px solid var(--terra);
+  outline-offset: 3px;
 }
 
-.theme-toggle button.is-active {
-  opacity: 1;
-  color: var(--terra);
-  border-bottom-color: var(--terra);
+.theme-picker::after {
+  content: "";
+  position: absolute;
+  right: 0.15rem;
+  top: 50%;
+  width: 0.42rem;
+  height: 0.42rem;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: translateY(-70%) rotate(45deg);
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.theme-picker select option {
+  color: #1a1815;
+  background: #fff;
+  text-transform: none;
+  letter-spacing: normal;
 }
 
 /* Mobile menu -------------------------------------------------------- */
@@ -1027,7 +1048,7 @@ button {
     display: none;
   }
 
-  .theme-toggle {
+  .theme-picker {
     margin-left: auto;
   }
 
