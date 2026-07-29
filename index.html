@@ -21,17 +21,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Outfit:wght@200;300;400;500&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Outfit:wght@200;300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Cinzel:wght@400;500;600&family=Jost:wght@300;400;500&family=Orbitron:wght@500;600;700&family=Exo+2:wght@300;400;500&family=Manrope:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=6" />
-    <link rel="stylesheet" href="theme-modernist.css?v=6" />
+    <link rel="stylesheet" href="styles.css?v=7" />
+    <link rel="stylesheet" href="theme-modernist.css?v=7" />
+    <link rel="stylesheet" href="theme-artdeco.css?v=7" />
+    <link rel="stylesheet" href="theme-retro.css?v=7" />
+    <link rel="stylesheet" href="theme-glass.css?v=7" />
     <!--
-      Site style. Two themes are available:
+      Site style. Five themes are available:
         "luxury"    — warm, editorial, serif (default)
         "modernist" — clean lines, functional beauty, timeless
-      Visitors can switch with the toggle in the header (saved in their
-      browser). To change the DEFAULT theme, edit the fallback below.
+        "artdeco"   — elegant patterns, luxury, vintage sophistication
+        "retro"     — 80s vision of the future, refined nostalgia
+        "glass"     — translucent layers, blurred backgrounds, depth
+      Visitors can switch with the Style picker in the header (saved in
+      their browser). To change the DEFAULT theme, edit the fallback below.
     -->
     <script>
       document.documentElement.dataset.theme =
@@ -55,11 +61,16 @@
         <a href="#hobbies" data-nav="hobbies">Hobbies</a>
         <a class="nav-cta" href="#contact" data-nav="contact">Contact</a>
       </nav>
-      <div class="theme-toggle" role="group" aria-label="Site style">
-        <button type="button" data-theme-btn="luxury">Luxe</button>
-        <span aria-hidden="true">/</span>
-        <button type="button" data-theme-btn="modernist">Modern</button>
-      </div>
+      <label class="theme-picker">
+        <span class="theme-picker-label">Style</span>
+        <select data-theme-select aria-label="Site style">
+          <option value="luxury">Luxury</option>
+          <option value="modernist">Modernist</option>
+          <option value="artdeco">Art Deco</option>
+          <option value="retro">Retro-Future</option>
+          <option value="glass">Glass</option>
+        </select>
+      </label>
       <button
         class="menu-toggle"
         type="button"
@@ -356,6 +367,6 @@
       </section>
     </main>
 
-    <script src="script.js?v=6"></script>
+    <script src="script.js?v=7"></script>
   </body>
 </html>

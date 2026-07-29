@@ -1,0 +1,288 @@
+/* ------------------------------------------------------------------
+   Glassmorphism theme — translucent layers, blurred backgrounds,
+   depth. Applied when <html data-theme="glass">. A soft mesh-gradient
+   backdrop with frosted panels, rounded geometry, and indigo/pink
+   accents.
+------------------------------------------------------------------- */
+
+[data-theme="glass"] {
+  --ink: #1d2033;
+  --ink-soft: #3c4059;
+  --muted: #6d7290;
+  --paper: #eef1fb;
+  --paper-warm: #f3f5fd;
+  --paper-deep: #e2e7f7;
+  --night: #14162a;
+  --night-soft: #1b1e36;
+  --line: rgba(29, 32, 51, 0.12);
+  --line-light: rgba(29, 32, 51, 0.12);
+  --terra: #5b5fe8; /* vivid indigo */
+  --terra-deep: #4649c9;
+  --forest: #0ea5b7; /* teal */
+  --gold: #ec4899; /* pink */
+  --cream: #f3f5fd;
+  --font-display: "Outfit", "Segoe UI", sans-serif;
+  --font-body: "Manrope", "Segoe UI", sans-serif;
+}
+
+/* Surfaces: fixed mesh gradient the glass panels blur against -------- */
+[data-theme="glass"] body {
+  background:
+    radial-gradient(820px 560px at 88% -6%, rgba(236, 72, 153, 0.2), transparent 58%),
+    radial-gradient(900px 620px at -8% 22%, rgba(91, 95, 232, 0.22), transparent 58%),
+    radial-gradient(760px 540px at 55% 108%, rgba(14, 165, 183, 0.18), transparent 60%),
+    linear-gradient(180deg, #f3f5fd, #eef1fb);
+  background-attachment: fixed;
+  color: var(--ink);
+}
+
+[data-theme="glass"] .grain {
+  display: none;
+}
+
+[data-theme="glass"] ::selection {
+  background: rgba(91, 95, 232, 0.22);
+}
+
+[data-theme="glass"] .progress span {
+  background: linear-gradient(90deg, #5b5fe8, #ec4899);
+}
+
+/* Typography ------------------------------------------------------------ */
+[data-theme="glass"] .hero-name,
+[data-theme="glass"] .section h2,
+[data-theme="glass"] .timeline-body h3,
+[data-theme="glass"] .project-main h3,
+[data-theme="glass"] .edu-main h3,
+[data-theme="glass"] .hobby h3,
+[data-theme="glass"] .contact-title {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+[data-theme="glass"] .hero-name em,
+[data-theme="glass"] .contact-title em {
+  font-style: normal;
+  background: linear-gradient(90deg, #5b5fe8, #ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+[data-theme="glass"] .chapter span,
+[data-theme="glass"] .project-index,
+[data-theme="glass"] .footer-brand,
+[data-theme="glass"] .brand-text,
+[data-theme="glass"] .contact-mail,
+[data-theme="glass"] .hobbies .section-copy {
+  font-style: normal;
+}
+
+/* Header: a floating glass bar ------------------------------------------- */
+[data-theme="glass"] .site-header.is-scrolled {
+  background: rgba(255, 255, 255, 0.55);
+  -webkit-backdrop-filter: blur(22px) saturate(1.4);
+  backdrop-filter: blur(22px) saturate(1.4);
+  border-bottom-color: rgba(255, 255, 255, 0.65);
+}
+
+[data-theme="glass"] .brand-mark {
+  background: linear-gradient(135deg, #5b5fe8, #ec4899);
+  box-shadow: 0 4px 14px rgba(91, 95, 232, 0.35);
+}
+
+[data-theme="glass"] .brand-text {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-size: 1.15rem;
+}
+
+[data-theme="glass"] .nav-cta {
+  border-radius: 999px;
+}
+
+[data-theme="glass"] .mobile-nav {
+  background: rgba(243, 245, 253, 0.85);
+  -webkit-backdrop-filter: blur(28px);
+  backdrop-filter: blur(28px);
+}
+
+/* The dark-section header tone never applies: this theme's closing is light */
+[data-theme="glass"] .site-header.on-dark:not(.is-scrolled) {
+  color: var(--ink);
+}
+
+/* Hero -------------------------------------------------------------------- */
+[data-theme="glass"] .kicker-line {
+  background: linear-gradient(90deg, #5b5fe8, #ec4899);
+  height: 2px;
+  border-radius: 2px;
+}
+
+[data-theme="glass"] .hero-foot {
+  border-top-color: rgba(29, 32, 51, 0.14);
+}
+
+/* Buttons: pill-shaped glass ------------------------------------------------ */
+[data-theme="glass"] .btn {
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+[data-theme="glass"] .btn-terra {
+  background: linear-gradient(135deg, #5b5fe8, #7c5ce8);
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(91, 95, 232, 0.3);
+}
+
+[data-theme="glass"] .btn-terra:hover {
+  background: linear-gradient(135deg, #4649c9, #6a4bd6);
+  box-shadow: 0 16px 38px rgba(91, 95, 232, 0.42);
+}
+
+/* Sections: frosted cards ----------------------------------------------------- */
+[data-theme="glass"] .experience,
+[data-theme="glass"] .hobbies {
+  background: transparent;
+}
+
+[data-theme="glass"] .timeline,
+[data-theme="glass"] .project-list {
+  border-top: 0;
+  display: grid;
+  gap: 1.1rem;
+}
+
+[data-theme="glass"] .timeline-item,
+[data-theme="glass"] .project {
+  border-bottom: 0;
+  border-radius: 22px;
+  padding: clamp(1.6rem, 3.5vw, 2.3rem);
+  background: rgba(255, 255, 255, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 18px 44px rgba(29, 32, 51, 0.08);
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease),
+    background 0.4s var(--ease);
+}
+
+[data-theme="glass"] .timeline-item:hover,
+[data-theme="glass"] .project:hover {
+  background: rgba(255, 255, 255, 0.58);
+  transform: translateY(-3px);
+  box-shadow: 0 24px 54px rgba(29, 32, 51, 0.12);
+}
+
+[data-theme="glass"] .dot-terra {
+  background: var(--terra);
+  box-shadow: 0 0 0 4px rgba(91, 95, 232, 0.16);
+}
+
+[data-theme="glass"] .dot-forest {
+  background: var(--forest);
+  box-shadow: 0 0 0 4px rgba(14, 165, 183, 0.16);
+}
+
+[data-theme="glass"] .dot-gold {
+  background: var(--gold);
+  box-shadow: 0 0 0 4px rgba(236, 72, 153, 0.16);
+}
+
+[data-theme="glass"] .edu-panel {
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 18px 44px rgba(29, 32, 51, 0.08);
+}
+
+[data-theme="glass"] .edu-tags li {
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.75);
+}
+
+[data-theme="glass"] .edu-tags li:hover {
+  border-color: var(--terra);
+  color: var(--terra);
+}
+
+[data-theme="glass"] .hobby {
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 18px 44px rgba(29, 32, 51, 0.1);
+}
+
+[data-theme="glass"] .hobby figcaption {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: linear-gradient(180deg, transparent, rgba(20, 22, 42, 0.55));
+}
+
+/* Contact: a light glass finale instead of a dark movement --------------------- */
+[data-theme="glass"] .contact {
+  background: transparent;
+  color: var(--ink);
+}
+
+[data-theme="glass"] .contact-inner {
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(22px);
+  backdrop-filter: blur(22px);
+  box-shadow: 0 24px 60px rgba(29, 32, 51, 0.1);
+  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.5rem, 4vw, 3rem);
+  margin-bottom: clamp(3rem, 6vw, 4.5rem);
+}
+
+[data-theme="glass"] .chapter-light {
+  color: var(--terra);
+}
+
+[data-theme="glass"] .chapter-light span {
+  color: var(--muted);
+}
+
+[data-theme="glass"] .contact-title {
+  color: var(--ink);
+}
+
+[data-theme="glass"] .contact-copy {
+  color: var(--ink-soft);
+}
+
+[data-theme="glass"] .contact-mail {
+  color: var(--terra);
+  border-bottom-color: rgba(91, 95, 232, 0.4);
+}
+
+[data-theme="glass"] .contact-mail:hover {
+  color: var(--terra-deep);
+  border-color: var(--terra-deep);
+}
+
+[data-theme="glass"] .btn-outline-light {
+  border-color: rgba(29, 32, 51, 0.25);
+  color: var(--ink);
+}
+
+[data-theme="glass"] .btn-outline-light:hover {
+  border-color: var(--terra);
+  color: var(--terra);
+  background: rgba(91, 95, 232, 0.06);
+}
+
+[data-theme="glass"] .site-footer {
+  border-top-color: rgba(29, 32, 51, 0.12);
+}
+
+[data-theme="glass"] .footer-inner {
+  color: var(--muted);
+}
+
+[data-theme="glass"] .footer-brand {
+  color: var(--ink);
+}

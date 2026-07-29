@@ -1,0 +1,214 @@
+/* ------------------------------------------------------------------
+   Retro-futuristic theme — an 80s vision of the future, refined
+   nostalgia. Applied when <html data-theme="retro">. Deep indigo
+   night, neon magenta and cyan used with restraint, Orbitron display
+   type, soft glows, and a faint horizon grid.
+------------------------------------------------------------------- */
+
+[data-theme="retro"] {
+  --ink: #eae7fb;
+  --ink-soft: #c8c3e8;
+  --muted: #8d86b8;
+  --paper: #100d26;
+  --paper-warm: #151130;
+  --paper-deep: #1b1638;
+  --night: #0a081c;
+  --night-soft: #110d28;
+  --line: rgba(234, 231, 251, 0.16);
+  --line-light: rgba(234, 231, 251, 0.16);
+  --terra: #ff3ea5; /* neon magenta */
+  --terra-deep: #d92a89;
+  --forest: #2dd9e8; /* neon cyan */
+  --gold: #ffd166; /* sunset amber */
+  --cream: #eae7fb;
+  --font-display: "Orbitron", "Space Grotesk", sans-serif;
+  --font-body: "Exo 2", "Segoe UI", sans-serif;
+}
+
+/* Surfaces: indigo night with neon glows and a faint grid ------------ */
+[data-theme="retro"] body {
+  background:
+    radial-gradient(1000px 560px at 82% -10%, rgba(255, 62, 165, 0.14), transparent 55%),
+    radial-gradient(900px 520px at 8% 20%, rgba(45, 217, 232, 0.1), transparent 55%),
+    repeating-linear-gradient(0deg, rgba(234, 231, 251, 0.025) 0 1px, transparent 1px 72px),
+    repeating-linear-gradient(90deg, rgba(234, 231, 251, 0.02) 0 1px, transparent 1px 72px),
+    linear-gradient(180deg, #151130 0%, #100d26 50%, #0c0920 100%);
+  color: var(--ink);
+}
+
+[data-theme="retro"] .grain {
+  opacity: 0.045;
+}
+
+[data-theme="retro"] ::selection {
+  background: rgba(255, 62, 165, 0.35);
+}
+
+[data-theme="retro"] .progress span {
+  background: linear-gradient(90deg, #ff3ea5, #2dd9e8);
+}
+
+/* Typography ----------------------------------------------------------- */
+[data-theme="retro"] .hero-name,
+[data-theme="retro"] .section h2,
+[data-theme="retro"] .contact-title {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.12;
+}
+
+[data-theme="retro"] .timeline-body h3,
+[data-theme="retro"] .project-main h3,
+[data-theme="retro"] .edu-main h3,
+[data-theme="retro"] .hobby h3 {
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+[data-theme="retro"] .hero-name {
+  font-size: clamp(2.4rem, 6.5vw, 4.7rem);
+}
+
+[data-theme="retro"] .hero-name em,
+[data-theme="retro"] .contact-title em {
+  font-style: normal;
+  background: linear-gradient(90deg, #ff3ea5, #2dd9e8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Header ------------------------------------------------------------------ */
+[data-theme="retro"] .site-header.is-scrolled {
+  background: rgba(16, 13, 38, 0.85);
+  border-bottom-color: var(--line);
+}
+
+[data-theme="retro"] .brand-mark {
+  background: var(--terra);
+  box-shadow: 0 0 12px rgba(255, 62, 165, 0.8);
+}
+
+[data-theme="retro"] .mobile-nav {
+  background: rgba(16, 13, 38, 0.97);
+}
+
+[data-theme="retro"] .mobile-nav a {
+  color: var(--ink);
+}
+
+[data-theme="retro"] .site-header.menu-open {
+  color: var(--ink) !important;
+}
+
+/* Hero ---------------------------------------------------------------------- */
+[data-theme="retro"] .kicker-line {
+  background: linear-gradient(90deg, #ff3ea5, #2dd9e8);
+  height: 2px;
+}
+
+[data-theme="retro"] .hero-foot {
+  border-top-color: var(--line);
+}
+
+/* Buttons ---------------------------------------------------------------------- */
+[data-theme="retro"] .btn-terra {
+  background: var(--terra);
+  color: #16041c;
+  font-weight: 500;
+}
+
+[data-theme="retro"] .btn-terra:hover {
+  background: #ff5cb3;
+  box-shadow: 0 0 26px rgba(255, 62, 165, 0.5);
+}
+
+/* Sections ------------------------------------------------------------------------- */
+[data-theme="retro"] .experience,
+[data-theme="retro"] .hobbies {
+  background: transparent;
+}
+
+[data-theme="retro"] .timeline-item:hover,
+[data-theme="retro"] .project:hover {
+  background: linear-gradient(90deg, rgba(255, 62, 165, 0.07), transparent 70%);
+}
+
+[data-theme="retro"] .dot-terra {
+  background: var(--terra);
+  box-shadow: 0 0 10px rgba(255, 62, 165, 0.7);
+}
+
+[data-theme="retro"] .dot-forest {
+  background: var(--forest);
+  box-shadow: 0 0 10px rgba(45, 217, 232, 0.7);
+}
+
+[data-theme="retro"] .dot-gold {
+  background: var(--gold);
+  box-shadow: 0 0 10px rgba(255, 209, 102, 0.7);
+}
+
+[data-theme="retro"] .edu-panel {
+  background: rgba(234, 231, 251, 0.04);
+  border-color: rgba(234, 231, 251, 0.18);
+  box-shadow: 0 0 40px rgba(255, 62, 165, 0.07);
+}
+
+[data-theme="retro"] .edu-tags li:hover {
+  border-color: var(--forest);
+  color: var(--forest);
+}
+
+[data-theme="retro"] .hobby img {
+  filter: saturate(1.1) contrast(1.02);
+}
+
+/* Contact / closing --------------------------------------------------------------------- */
+[data-theme="retro"] .contact {
+  background:
+    radial-gradient(900px 500px at 80% 0%, rgba(255, 62, 165, 0.2), transparent 55%),
+    radial-gradient(700px 460px at 10% 95%, rgba(45, 217, 232, 0.16), transparent 55%),
+    repeating-linear-gradient(0deg, rgba(234, 231, 251, 0.02) 0 1px, transparent 1px 72px),
+    linear-gradient(180deg, #0e0b22, #090718);
+}
+
+[data-theme="retro"] .chapter-light {
+  color: var(--forest);
+}
+
+[data-theme="retro"] .chapter-light span {
+  color: rgba(234, 231, 251, 0.5);
+}
+
+[data-theme="retro"] .contact-title {
+  color: #fff;
+}
+
+[data-theme="retro"] .contact-copy {
+  color: rgba(234, 231, 251, 0.7);
+}
+
+[data-theme="retro"] .contact-mail {
+  color: var(--forest);
+  border-bottom-color: rgba(45, 217, 232, 0.5);
+}
+
+[data-theme="retro"] .contact-mail:hover {
+  color: #fff;
+  border-color: var(--forest);
+}
+
+[data-theme="retro"] .btn-outline-light {
+  border-color: rgba(45, 217, 232, 0.45);
+  color: var(--cream);
+}
+
+[data-theme="retro"] .btn-outline-light:hover {
+  border-color: var(--forest);
+  background: rgba(45, 217, 232, 0.08);
+}
+
+[data-theme="retro"] .footer-brand {
+  color: var(--terra);
+}

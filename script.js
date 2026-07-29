@@ -123,7 +123,7 @@
   }
 
   /* Theme switching ------------------------------------------------------- */
-  const themeButtons = document.querySelectorAll("[data-theme-btn]");
+  const themeSelect = document.querySelector("[data-theme-select]");
   const applyTheme = (theme) => {
     document.documentElement.dataset.theme = theme;
     try {
@@ -131,12 +131,10 @@
     } catch (_) {
       /* storage unavailable (private mode); theme still applies */
     }
-    themeButtons.forEach((btn) => {
-      btn.classList.toggle("is-active", btn.dataset.themeBtn === theme);
-    });
+    if (themeSelect) themeSelect.value = theme;
   };
-  themeButtons.forEach((btn) => {
-    btn.addEventListener("click", () => applyTheme(btn.dataset.themeBtn));
+  themeSelect?.addEventListener("change", (event) => {
+    applyTheme(event.target.value);
   });
   applyTheme(document.documentElement.dataset.theme || "luxury");
 
