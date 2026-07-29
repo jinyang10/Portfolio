@@ -6,12 +6,11 @@
   const navLinks = document.querySelectorAll("[data-nav]");
   const sections = document.querySelectorAll("[data-section]");
   const revealItems = document.querySelectorAll(".reveal");
-  const heroImage = document.querySelector("[data-hero-image]");
   const prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
 
-  /* Header state, reading progress, gentle hero parallax ------------- */
+  /* Header state and reading progress --------------------------------- */
   let ticking = false;
 
   const onScroll = () => {
@@ -27,10 +26,6 @@
         progressBar.style.transform = `scaleX(${max > 0 ? Math.min(y / max, 1) : 0})`;
       }
 
-      if (heroImage && !prefersReducedMotion && y <= window.innerHeight) {
-        heroImage.style.transform = `scale(${1.07 + y * 0.00006}) translate3d(0, ${y * 0.1}px, 0)`;
-      }
-
       ticking = false;
     });
   };
@@ -38,8 +33,8 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  /* Header tone: light text while over the hero and the dark closing --- */
-  const darkZones = document.querySelectorAll(".hero, .contact");
+  /* Header tone: light text while over the dark closing section -------- */
+  const darkZones = document.querySelectorAll(".contact");
   const syncHeaderTone = () => {
     const overDark = [...darkZones].some((zone) => {
       const rect = zone.getBoundingClientRect();
@@ -98,7 +93,12 @@
       },
       { threshold: 0.15, rootMargin: "0px 0px -7% 0px" }
     );
-    revealItems.forEach((item) => revealObserver.observe(item));
+    revealItems.forEach((item) => {
+      // The hero composes the opening frame; reveal it on load rather than
+      // waiting for the observer, whose bottom margin can miss the hero foot.
+      if (item.closest(".hero")) item.classList.add("is-in");
+      else revealObserver.observe(item);
+    });
   } else {
     revealItems.forEach((item) => item.classList.add("is-in"));
   }

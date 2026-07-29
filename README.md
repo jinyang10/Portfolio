@@ -1,12 +1,13 @@
-# Jin Yang — Meridian
+# Jin Yang — Portfolio
 
-A luxury-minimal, single-page portfolio for **Jin Yang**.
+A luxury-minimal, single-page portfolio for **Jin Yang** — a third-year
+Computer Engineering student at York University's Lassonde School of
+Engineering, focused on full-stack development with AI workflows and projects
+for real-world applications.
 
-**Meridian** is an original personal-atelier concept: a private studio practice
-for considered software — technology, research, and craft presented with
-restraint, clarity, and editorial calm. The page reads as one uninterrupted
-scrolling experience, paced like a gallery: a quiet opening statement, a
-manifesto interlude, chaptered sections, and a decisive closing invitation.
+The page reads as one uninterrupted scrolling experience, paced like a
+gallery: a quiet opening welcome, a manifesto interlude, chaptered sections,
+and a decisive closing invitation.
 
 ## Live site
 
@@ -17,9 +18,9 @@ the site is available at:
 
 ## Sections
 
-1. **Home** — full-bleed opening statement with gentle parallax
+1. **Home** — a calm opening welcome and introduction
 2. **Experience** — a refined timeline of work
-3. **Education** — York University foundations
+3. **Education** — Computer Engineering at York University, Lassonde
 4. **Projects** — selected work, distilled
 5. **Hobbies** — what restores attention
 6. **Contact** — a dark closing movement with email & LinkedIn
