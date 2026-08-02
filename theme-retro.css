@@ -58,7 +58,7 @@
 }
 
 [data-theme="retro"] .timeline-body h3,
-[data-theme="retro"] .project-main h3,
+[data-theme="retro"] .project-body h3,
 [data-theme="retro"] .edu-main h3,
 [data-theme="retro"] .hobby h3 {
   font-weight: 500;
@@ -125,9 +125,28 @@
   background: transparent;
 }
 
-[data-theme="retro"] .timeline-item:hover,
-[data-theme="retro"] .project:hover {
+[data-theme="retro"] .timeline-item:hover {
   background: linear-gradient(90deg, rgba(255, 62, 165, 0.07), transparent 70%);
+}
+
+[data-theme="retro"] .project-card {
+  background: rgba(24, 20, 58, 0.72);
+  border-color: rgba(255, 62, 165, 0.28);
+}
+
+[data-theme="retro"] .project-card:hover {
+  border-color: rgba(45, 217, 232, 0.55);
+  background: rgba(30, 24, 72, 0.9);
+  box-shadow: 0 0 28px rgba(255, 62, 165, 0.18);
+}
+
+[data-theme="retro"] .project-status {
+  color: var(--forest);
+}
+
+[data-theme="retro"] .project-status i {
+  background: var(--forest);
+  box-shadow: 0 0 10px rgba(45, 217, 232, 0.7);
 }
 
 [data-theme="retro"] .dot-terra {

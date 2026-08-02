@@ -52,7 +52,7 @@
 [data-theme="glass"] .hero-name,
 [data-theme="glass"] .section h2,
 [data-theme="glass"] .timeline-body h3,
-[data-theme="glass"] .project-main h3,
+[data-theme="glass"] .project-body h3,
 [data-theme="glass"] .edu-main h3,
 [data-theme="glass"] .hobby h3,
 [data-theme="glass"] .contact-title {
@@ -142,15 +142,13 @@
   background: transparent;
 }
 
-[data-theme="glass"] .timeline,
-[data-theme="glass"] .project-list {
+[data-theme="glass"] .timeline {
   border-top: 0;
   display: grid;
   gap: 1.1rem;
 }
 
-[data-theme="glass"] .timeline-item,
-[data-theme="glass"] .project {
+[data-theme="glass"] .timeline-item {
   border-bottom: 0;
   border-radius: 22px;
   padding: clamp(1.6rem, 3.5vw, 2.3rem);
@@ -163,10 +161,23 @@
     background 0.4s var(--ease);
 }
 
-[data-theme="glass"] .timeline-item:hover,
-[data-theme="glass"] .project:hover {
+[data-theme="glass"] .timeline-item:hover {
   background: rgba(255, 255, 255, 0.58);
   transform: translateY(-3px);
+  box-shadow: 0 24px 54px rgba(29, 32, 51, 0.12);
+}
+
+[data-theme="glass"] .project-card {
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 18px 44px rgba(29, 32, 51, 0.08);
+}
+
+[data-theme="glass"] .project-card:hover {
+  background: rgba(255, 255, 255, 0.58);
   box-shadow: 0 24px 54px rgba(29, 32, 51, 0.12);
 }
 
