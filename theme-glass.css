@@ -51,9 +51,7 @@
 /* Typography ------------------------------------------------------------ */
 [data-theme="glass"] .hero-name,
 [data-theme="glass"] .section h2,
-[data-theme="glass"] .timeline-body h3,
-[data-theme="glass"] .project-main h3,
-[data-theme="glass"] .edu-main h3,
+[data-theme="glass"] .project-body h3,
 [data-theme="glass"] .hobby h3,
 [data-theme="glass"] .contact-title {
   font-weight: 600;
@@ -137,72 +135,38 @@
 }
 
 /* Sections: frosted cards ----------------------------------------------------- */
-[data-theme="glass"] .extracurriculars,
+[data-theme="glass"] .about,
 [data-theme="glass"] .hobbies {
   background: transparent;
 }
 
-[data-theme="glass"] .timeline,
-[data-theme="glass"] .project-list {
-  border-top: 0;
-  display: grid;
-  gap: 1.1rem;
-}
-
-[data-theme="glass"] .timeline-item,
-[data-theme="glass"] .project {
-  border-bottom: 0;
+[data-theme="glass"] .hero-goals,
+[data-theme="glass"] .about-notes {
   border-radius: 22px;
-  padding: clamp(1.6rem, 3.5vw, 2.3rem);
+  padding: clamp(1.4rem, 3vw, 1.9rem);
   background: rgba(255, 255, 255, 0.42);
   border: 1px solid rgba(255, 255, 255, 0.65);
   -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
   box-shadow: 0 18px 44px rgba(29, 32, 51, 0.08);
-  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease),
-    background 0.4s var(--ease);
 }
 
-[data-theme="glass"] .timeline-item:hover,
-[data-theme="glass"] .project:hover {
+[data-theme="glass"] .about-notes li {
+  border-bottom-color: rgba(29, 32, 51, 0.08);
+}
+
+[data-theme="glass"] .project-card {
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 18px 44px rgba(29, 32, 51, 0.08);
+}
+
+[data-theme="glass"] .project-card:hover {
   background: rgba(255, 255, 255, 0.58);
-  transform: translateY(-3px);
   box-shadow: 0 24px 54px rgba(29, 32, 51, 0.12);
-}
-
-[data-theme="glass"] .dot-terra {
-  background: var(--terra);
-  box-shadow: 0 0 0 4px rgba(91, 95, 232, 0.16);
-}
-
-[data-theme="glass"] .dot-forest {
-  background: var(--forest);
-  box-shadow: 0 0 0 4px rgba(14, 165, 183, 0.16);
-}
-
-[data-theme="glass"] .dot-gold {
-  background: var(--gold);
-  box-shadow: 0 0 0 4px rgba(236, 72, 153, 0.16);
-}
-
-[data-theme="glass"] .edu-panel {
-  border-radius: 26px;
-  background: rgba(255, 255, 255, 0.42);
-  border: 1px solid rgba(255, 255, 255, 0.65);
-  -webkit-backdrop-filter: blur(18px);
-  backdrop-filter: blur(18px);
-  box-shadow: 0 18px 44px rgba(29, 32, 51, 0.08);
-}
-
-[data-theme="glass"] .edu-tags li {
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.5);
-  border-color: rgba(255, 255, 255, 0.75);
-}
-
-[data-theme="glass"] .edu-tags li:hover {
-  border-color: var(--terra);
-  color: var(--terra);
 }
 
 [data-theme="glass"] .hobby {

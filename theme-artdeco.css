@@ -110,50 +110,34 @@
 }
 
 /* Sections ----------------------------------------------------------------------- */
-[data-theme="artdeco"] .extracurriculars,
+[data-theme="artdeco"] .about,
 [data-theme="artdeco"] .hobbies {
   background: transparent;
 }
 
-[data-theme="artdeco"] .timeline-item:hover,
-[data-theme="artdeco"] .project:hover {
-  background: linear-gradient(90deg, rgba(212, 175, 55, 0.06), transparent 70%);
+[data-theme="artdeco"] .hero-goals {
+  border-left-color: rgba(212, 175, 55, 0.45);
 }
 
-/* Diamond markers */
-[data-theme="artdeco"] .accent-dot {
+[data-theme="artdeco"] .about-notes {
+  border-top-color: rgba(212, 175, 55, 0.35);
+}
+
+[data-theme="artdeco"] .project-card {
+  background: rgba(20, 18, 16, 0.55);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  box-shadow: inset 0 0 0 3px rgba(20, 18, 16, 0.9);
+}
+
+[data-theme="artdeco"] .project-card:hover {
+  border-color: rgba(212, 175, 55, 0.55);
+  background: rgba(28, 24, 20, 0.72);
+}
+
+[data-theme="artdeco"] .project-status i {
   border-radius: 0;
   transform: rotate(45deg);
-}
-
-[data-theme="artdeco"] .dot-terra {
-  background: var(--terra);
   box-shadow: none;
-}
-
-[data-theme="artdeco"] .dot-forest {
-  background: var(--forest);
-  box-shadow: none;
-}
-
-[data-theme="artdeco"] .dot-gold {
-  background: #f0e7d3;
-  box-shadow: none;
-}
-
-/* Double-line deco frame around the education panel */
-[data-theme="artdeco"] .edu-panel {
-  background: rgba(212, 175, 55, 0.05);
-  border: 1px solid rgba(212, 175, 55, 0.45);
-  box-shadow:
-    inset 0 0 0 4px #16130d,
-    inset 0 0 0 5px rgba(212, 175, 55, 0.3);
-  padding: clamp(2.2rem, 5vw, 3.6rem);
-}
-
-[data-theme="artdeco"] .edu-tags li:hover {
-  border-color: var(--terra);
-  color: var(--terra);
 }
 
 [data-theme="artdeco"] .hobby {

@@ -48,9 +48,7 @@
 /* Typography --------------------------------------------------------- */
 [data-theme="modernist"] .hero-name,
 [data-theme="modernist"] .section h2,
-[data-theme="modernist"] .timeline-body h3,
-[data-theme="modernist"] .project-main h3,
-[data-theme="modernist"] .edu-main h3,
+[data-theme="modernist"] .project-body h3,
 [data-theme="modernist"] .hobby h3,
 [data-theme="modernist"] .contact-title {
   font-weight: 600;
@@ -138,53 +136,49 @@
 }
 
 /* Sections ------------------------------------------------------------------ */
-[data-theme="modernist"] .extracurriculars {
+[data-theme="modernist"] .about {
   background: transparent;
 }
 
-[data-theme="modernist"] .timeline {
+[data-theme="modernist"] .about-notes {
   border-top: 2px solid var(--ink);
 }
 
-[data-theme="modernist"] .timeline-item:hover {
-  background: rgba(0, 47, 167, 0.035);
+[data-theme="modernist"] .about-notes li {
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
-[data-theme="modernist"] .accent-dot {
+[data-theme="modernist"] .hero-goals-label {
+  font-weight: 600;
+}
+
+[data-theme="modernist"] .hero-goals p:last-child {
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.4;
+}
+
+[data-theme="modernist"] .project-card {
+  background: #fff;
+  border-color: rgba(16, 16, 18, 0.16);
   border-radius: 0;
 }
 
-[data-theme="modernist"] .dot-terra {
-  background: var(--terra);
-  box-shadow: none;
-}
-
-[data-theme="modernist"] .dot-forest {
-  background: var(--forest);
-  box-shadow: none;
-}
-
-[data-theme="modernist"] .dot-gold {
-  background: var(--gold);
-  box-shadow: none;
-}
-
-[data-theme="modernist"] .edu-panel {
+[data-theme="modernist"] .project-card:hover {
+  border-color: var(--terra);
   background: #fff;
-  border-color: rgba(16, 16, 18, 0.16);
-}
-
-[data-theme="modernist"] .project-list {
-  border-top: 2px solid var(--ink);
-}
-
-[data-theme="modernist"] .project:hover {
-  background: rgba(0, 47, 167, 0.035);
+  transform: translateY(-2px);
 }
 
 [data-theme="modernist"] .project-index {
   font-weight: 600;
+  font-style: normal;
   color: var(--terra);
+}
+
+[data-theme="modernist"] .project-status i {
+  border-radius: 0;
 }
 
 [data-theme="modernist"] .hobbies {
