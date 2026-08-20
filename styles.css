@@ -763,11 +763,17 @@ button {
 }
 
 .project-plant .project-visual {
-  background: #f7f4ee;
+  background: #fff;
 }
 
 .project-plant .project-visual img {
+  position: absolute;
+  inset: 0.55rem;
+  width: calc(100% - 1.1rem);
+  height: calc(100% - 1.1rem);
+  margin: 0;
   object-fit: contain;
+  object-position: center;
 }
 
 .project-card.project-fit:hover .project-visual img {
