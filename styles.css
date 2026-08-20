@@ -763,11 +763,11 @@ button {
 }
 
 .project-plant .project-visual {
-  background: #1c1916;
+  background: #f7f4ee;
 }
 
 .project-plant .project-visual img {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .project-card.project-fit:hover .project-visual img {
