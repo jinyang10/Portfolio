@@ -177,10 +177,6 @@
   color: var(--terra);
 }
 
-[data-theme="modernist"] .project-status i {
-  border-radius: 0;
-}
-
 [data-theme="modernist"] .hobbies {
   background: transparent;
 }

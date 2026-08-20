@@ -143,15 +143,6 @@
   box-shadow: 0 0 28px rgba(255, 62, 165, 0.18);
 }
 
-[data-theme="retro"] .project-status {
-  color: var(--forest);
-}
-
-[data-theme="retro"] .project-status i {
-  background: var(--forest);
-  box-shadow: 0 0 10px rgba(45, 217, 232, 0.7);
-}
-
 [data-theme="retro"] .hobby img {
   filter: saturate(1.1) contrast(1.02);
 }

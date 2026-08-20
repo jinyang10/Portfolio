@@ -812,24 +812,6 @@ button {
   line-height: 1;
 }
 
-.project-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  font-size: 0.68rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--forest);
-}
-
-.project-status i {
-  width: 0.45rem;
-  height: 0.45rem;
-  border-radius: 50%;
-  background: var(--forest);
-  box-shadow: 0 0 0 3px rgba(46, 74, 62, 0.14);
-}
-
 .project-body h3 {
   margin: 0;
   font-family: var(--font-display);
