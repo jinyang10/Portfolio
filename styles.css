@@ -742,8 +742,8 @@ button {
 }
 
 .project-fit .project-visual {
-  aspect-ratio: 1915 / 998;
-  background: #123c3d;
+  min-height: 0;
+  background: var(--paper-deep);
 }
 
 .project-fit .project-visual::after {
@@ -751,6 +751,7 @@ button {
 }
 
 .project-fit .project-visual img {
+  height: auto;
   object-fit: contain;
   object-position: center;
   filter: none;
