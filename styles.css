@@ -691,6 +691,10 @@ button {
   grid-template-rows: minmax(12.5rem, 42vw) 1fr;
 }
 
+.project-grid .project-card.project-fit {
+  grid-template-rows: auto 1fr;
+}
+
 .project-visual {
   position: relative;
   display: block;
@@ -734,6 +738,26 @@ button {
 .project-card:hover .project-visual img {
   transform: scale(1.04);
   filter: saturate(0.98) contrast(1.04);
+}
+
+.project-fit .project-visual {
+  aspect-ratio: 1915 / 998;
+  background: #123c3d;
+}
+
+.project-fit .project-visual::after {
+  display: none;
+}
+
+.project-fit .project-visual img {
+  object-fit: contain;
+  object-position: center;
+  filter: none;
+}
+
+.project-card.project-fit:hover .project-visual img {
+  transform: none;
+  filter: none;
 }
 
 .project-card:hover .project-visual::after {
@@ -1091,6 +1115,10 @@ button {
 
   .project-grid .project-card {
     grid-template-rows: 13rem 1fr;
+  }
+
+  .project-grid .project-card.project-fit {
+    grid-template-rows: auto 1fr;
   }
 
   .hobby-lift,
