@@ -844,6 +844,11 @@ button {
   color: var(--muted);
 }
 
+.project-fit .project-stack {
+  margin-top: 0.85rem !important;
+  padding-top: 0.7rem;
+}
+
 .project-link {
   display: inline-flex;
   align-items: center;
