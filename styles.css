@@ -692,7 +692,8 @@ button {
 }
 
 .project-grid .project-card.project-fit {
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto auto;
+  align-self: start;
 }
 
 .project-visual {
@@ -842,6 +843,10 @@ button {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--muted);
+}
+
+.project-fit .project-body {
+  flex: none;
 }
 
 .project-fit .project-stack {
@@ -1123,7 +1128,7 @@ button {
   }
 
   .project-grid .project-card.project-fit {
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto auto;
   }
 
   .hobby-lift,
