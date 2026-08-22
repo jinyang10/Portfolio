@@ -108,12 +108,6 @@
   letter-spacing: -0.02em;
 }
 
-/* Hero ------------------------------------------------------------------ */
-[data-theme="modernist"] .kicker-line {
-  background: var(--terra);
-  height: 2px;
-}
-
 /* Buttons ----------------------------------------------------------------- */
 [data-theme="modernist"] .btn {
   font-weight: 500;

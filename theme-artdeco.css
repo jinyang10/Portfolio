@@ -81,11 +81,6 @@
   color: var(--ink) !important;
 }
 
-/* Hero --------------------------------------------------------------------- */
-[data-theme="artdeco"] .kicker-line {
-  background: var(--terra);
-}
-
 /* Buttons --------------------------------------------------------------------- */
 [data-theme="artdeco"] .btn-terra {
   background: linear-gradient(135deg, #e6c968, #b48c3c);
