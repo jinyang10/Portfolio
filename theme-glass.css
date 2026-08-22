@@ -105,13 +105,6 @@
   color: var(--ink);
 }
 
-/* Hero -------------------------------------------------------------------- */
-[data-theme="glass"] .kicker-line {
-  background: linear-gradient(90deg, #5b5fe8, #ec4899);
-  height: 2px;
-  border-radius: 2px;
-}
-
 /* Buttons: pill-shaped glass ------------------------------------------------ */
 [data-theme="glass"] .btn {
   border-radius: 999px;

@@ -363,24 +363,6 @@ button {
   padding: calc(var(--header-h) + 1.5rem) 0 3rem;
 }
 
-.hero-kicker {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin: 0 0 1.4rem;
-  font-size: 0.72rem;
-  font-weight: 400;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.kicker-line {
-  width: 3rem;
-  height: 1px;
-  background: var(--gold);
-}
-
 .hero-name {
   margin: 0;
   font-family: var(--font-display);

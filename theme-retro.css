@@ -95,12 +95,6 @@
   color: var(--ink) !important;
 }
 
-/* Hero ---------------------------------------------------------------------- */
-[data-theme="retro"] .kicker-line {
-  background: linear-gradient(90deg, #ff3ea5, #2dd9e8);
-  height: 2px;
-}
-
 /* Buttons ---------------------------------------------------------------------- */
 [data-theme="retro"] .btn-terra {
   background: var(--terra);
