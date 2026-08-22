@@ -89,12 +89,6 @@
   border-bottom-color: rgba(16, 16, 18, 0.16);
 }
 
-[data-theme="modernist"] .brand-mark {
-  border-radius: 0;
-  background: var(--terra);
-  box-shadow: none;
-}
-
 [data-theme="modernist"] .brand-text {
   font-weight: 600;
   letter-spacing: -0.01em;

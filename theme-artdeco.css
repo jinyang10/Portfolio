@@ -69,17 +69,6 @@
   border-bottom-color: var(--line);
 }
 
-[data-theme="artdeco"] .brand-mark {
-  border-radius: 0;
-  transform: rotate(45deg);
-  background: var(--terra);
-  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
-}
-
-[data-theme="artdeco"] .brand:hover .brand-mark {
-  transform: rotate(45deg) scale(1.2);
-}
-
 [data-theme="artdeco"] .mobile-nav {
   background: rgba(20, 17, 11, 0.97);
 }
