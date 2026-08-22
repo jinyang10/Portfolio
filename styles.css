@@ -137,21 +137,7 @@ button {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
   z-index: 2;
-}
-
-.brand-mark {
-  width: 0.6rem;
-  height: 0.6rem;
-  border-radius: 50%;
-  background: var(--terra);
-  box-shadow: 0 0 0 5px rgba(163, 81, 47, 0.15);
-  transition: transform 0.4s var(--ease);
-}
-
-.brand:hover .brand-mark {
-  transform: scale(1.25);
 }
 
 .brand-text {
@@ -1079,8 +1065,7 @@ button {
   .hobby img,
   .project-visual img,
   .project-card,
-  .btn,
-  .brand-mark {
+  .btn {
     animation: none !important;
     transition: none !important;
   }

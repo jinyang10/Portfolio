@@ -84,11 +84,6 @@
   border-bottom-color: rgba(255, 255, 255, 0.65);
 }
 
-[data-theme="glass"] .brand-mark {
-  background: linear-gradient(135deg, #5b5fe8, #ec4899);
-  box-shadow: 0 4px 14px rgba(91, 95, 232, 0.35);
-}
-
 [data-theme="glass"] .brand-text {
   font-weight: 600;
   letter-spacing: -0.01em;
