@@ -124,10 +124,11 @@
 
   /* Theme switching ------------------------------------------------------- */
   const themeSelect = document.querySelector("[data-theme-select]");
+  const THEME_KEY = "portfolio-theme";
   const applyTheme = (theme) => {
     document.documentElement.dataset.theme = theme;
     try {
-      localStorage.setItem("theme", theme);
+      localStorage.setItem(THEME_KEY, theme);
     } catch (_) {
       /* storage unavailable (private mode); theme still applies */
     }
