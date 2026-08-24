@@ -697,6 +697,30 @@ button {
   );
 }
 
+.project-luma .project-visual {
+  background: #fff;
+  min-height: 28rem;
+}
+
+.project-luma .project-visual::after {
+  display: none;
+}
+
+.project-luma .project-visual img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: top center;
+  filter: none;
+}
+
+.project-card.project-luma:hover .project-visual img {
+  transform: none;
+  filter: none;
+}
+
 .project-visual img {
   width: 100%;
   height: 100%;
@@ -1086,6 +1110,10 @@ button {
 
   .project-featured .project-visual {
     min-height: 14rem;
+  }
+
+  .project-featured.project-luma .project-visual {
+    min-height: 22rem;
   }
 
   .project-grid {
