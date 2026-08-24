@@ -136,7 +136,7 @@
   themeSelect?.addEventListener("change", (event) => {
     applyTheme(event.target.value);
   });
-  applyTheme(document.documentElement.dataset.theme || "luxury");
+  applyTheme(document.documentElement.dataset.theme || "glass");
 
   /* Footer details -------------------------------------------------------- */
   const year = String(new Date().getFullYear());
