@@ -128,9 +128,8 @@
   background: transparent;
 }
 
-[data-theme="glass"] .hero-photo {
-  border-radius: 14px;
-}
+[data-theme="glass"] .hero-goals,
+[data-theme="glass"] .about-notes {
   border-radius: 22px;
   padding: clamp(1.4rem, 3vw, 1.9rem);
   background: rgba(255, 255, 255, 0.42);
