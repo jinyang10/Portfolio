@@ -402,6 +402,17 @@ button {
   border-left: 1px solid var(--line);
 }
 
+.hero-photo {
+  display: block;
+  width: 100%;
+  max-width: 17.5rem;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 12%;
+  border-radius: 16px;
+  margin: 0 0 1.35rem;
+}
+
 .hero-goals-label {
   margin: 0 0 0.85rem;
   font-size: clamp(0.92rem, 1.4vw, 1.05rem);
@@ -1161,6 +1172,11 @@ button {
     padding: 1.5rem 0 0;
     border-left: 0;
     border-top: 1px solid var(--line);
+  }
+
+  .hero-photo {
+    max-width: 13.5rem;
+    margin-inline: auto;
   }
 
   .project-featured {
