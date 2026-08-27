@@ -1175,8 +1175,8 @@ button {
   }
 
   .hero-photo {
-    max-width: 14rem;
-    margin-inline: auto 0;
+    max-width: 13.5rem;
+    margin-inline: auto;
   }
 
   .project-featured {
