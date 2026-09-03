@@ -175,7 +175,8 @@
   line-height: 1.4;
 }
 
-[data-theme="modernist"] .hobby img {
+[data-theme="modernist"] .hobby img,
+[data-theme="modernist"] .hobby video {
   filter: saturate(0.95) contrast(1.02);
 }
 

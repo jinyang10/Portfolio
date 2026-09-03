@@ -139,6 +139,41 @@
   });
   applyTheme(document.documentElement.dataset.theme || "glass");
 
+  /* Fitness card: first-frame poster, click to play ---------------------- */
+  const liftCard = document.querySelector("[data-lift-video]");
+  const liftVideo = liftCard?.querySelector("video");
+  if (liftCard && liftVideo) {
+    const startLift = () => {
+      liftVideo.controls = true;
+      liftCard.classList.add("is-playing");
+      const play = liftVideo.play();
+      if (play && typeof play.catch === "function") play.catch(() => {});
+    };
+
+    liftCard.addEventListener("click", (event) => {
+      if (liftVideo.controls && event.target === liftVideo) return;
+      if (liftVideo.paused) startLift();
+    });
+
+    liftCard.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        if (liftVideo.paused) startLift();
+        else liftVideo.pause();
+      }
+    });
+
+    liftVideo.addEventListener("ended", () => {
+      liftVideo.controls = false;
+      liftVideo.currentTime = 0;
+      liftCard.classList.remove("is-playing");
+    });
+
+    liftCard.setAttribute("tabindex", "0");
+    liftCard.setAttribute("role", "button");
+    liftCard.setAttribute("aria-label", "Play lifting video");
+  }
+
   /* Footer details -------------------------------------------------------- */
   const year = String(new Date().getFullYear());
   document.querySelectorAll("[data-year]").forEach((el) => {
