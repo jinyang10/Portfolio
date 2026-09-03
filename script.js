@@ -173,8 +173,6 @@
     liftCard.setAttribute("role", "button");
     liftCard.setAttribute("aria-label", "Play lifting video");
 
-    // Start fetching the file once Hobbies is nearby so playback
-    // does not wait on a cold 39MB download from GitHub Pages.
     const hobbies = document.querySelector("#hobbies");
     const warmVideo = () => {
       liftVideo.preload = "auto";
