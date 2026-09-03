@@ -139,15 +139,51 @@
   });
   applyTheme(document.documentElement.dataset.theme || "glass");
 
-  /* Fitness card: first-frame poster, click to play ---------------------- */
+  /* Fitness card: original file, fetched once, then played from memory -- */
   const liftCard = document.querySelector("[data-lift-video]");
   const liftVideo = liftCard?.querySelector("video");
   if (liftCard && liftVideo) {
+    const LIFT_DRIVE =
+      "https://drive.usercontent.google.com/download?id=1zp6EJFPidBydo1Z2n-1pQsbhDZz-1pgO&export=download";
+    const LIFT_LOCAL = "assets/lifting.mp4";
+
+    const fetchVideoBlob = async (url) => {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error("fetch");
+      const type = res.headers.get("content-type") || "";
+      if (type.includes("text/html")) throw new Error("html");
+      const blob = await res.blob();
+      if (blob.size < 1_000_000) throw new Error("tiny");
+      return blob;
+    };
+
+    const attachBlob = (blob) => {
+      liftVideo.querySelectorAll("source").forEach((node) => node.remove());
+      liftVideo.src = URL.createObjectURL(blob);
+      liftVideo.preload = "auto";
+      liftVideo.load();
+    };
+
+    liftCard.classList.add("is-loading");
+    const liftReady = fetchVideoBlob(LIFT_DRIVE)
+      .catch(() => fetchVideoBlob(LIFT_LOCAL))
+      .then((blob) => {
+        attachBlob(blob);
+        liftCard.classList.remove("is-loading");
+        liftCard.classList.add("is-ready");
+      })
+      .catch(() => {
+        liftCard.classList.remove("is-loading");
+        liftVideo.preload = "auto";
+      });
+
     const startLift = () => {
       liftVideo.controls = true;
       liftCard.classList.add("is-playing");
-      const play = liftVideo.play();
-      if (play && typeof play.catch === "function") play.catch(() => {});
+      liftReady.then(() => {
+        const play = liftVideo.play();
+        if (play && typeof play.catch === "function") play.catch(() => {});
+      });
     };
 
     liftCard.addEventListener("click", (event) => {
@@ -172,24 +208,6 @@
     liftCard.setAttribute("tabindex", "0");
     liftCard.setAttribute("role", "button");
     liftCard.setAttribute("aria-label", "Play lifting video");
-
-    const hobbies = document.querySelector("#hobbies");
-    const warmVideo = () => {
-      liftVideo.preload = "auto";
-    };
-    if (hobbies && "IntersectionObserver" in window) {
-      const warm = new IntersectionObserver(
-        (entries) => {
-          if (!entries.some((entry) => entry.isIntersecting)) return;
-          warmVideo();
-          warm.disconnect();
-        },
-        { rootMargin: "800px 0px" }
-      );
-      warm.observe(hobbies);
-    } else {
-      warmVideo();
-    }
   }
 
   /* Footer details -------------------------------------------------------- */
