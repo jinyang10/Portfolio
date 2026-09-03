@@ -172,6 +172,26 @@
     liftCard.setAttribute("tabindex", "0");
     liftCard.setAttribute("role", "button");
     liftCard.setAttribute("aria-label", "Play lifting video");
+
+    // Start fetching the file once Hobbies is nearby so playback
+    // does not wait on a cold 39MB download from GitHub Pages.
+    const hobbies = document.querySelector("#hobbies");
+    const warmVideo = () => {
+      liftVideo.preload = "auto";
+    };
+    if (hobbies && "IntersectionObserver" in window) {
+      const warm = new IntersectionObserver(
+        (entries) => {
+          if (!entries.some((entry) => entry.isIntersecting)) return;
+          warmVideo();
+          warm.disconnect();
+        },
+        { rootMargin: "800px 0px" }
+      );
+      warm.observe(hobbies);
+    } else {
+      warmVideo();
+    }
   }
 
   /* Footer details -------------------------------------------------------- */
