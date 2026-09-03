@@ -139,49 +139,35 @@
   });
   applyTheme(document.documentElement.dataset.theme || "glass");
 
-  /* Fitness card: 1080p HLS — start after the first ~2s chunk ------------ */
+  /* Fitness card: YouTube embed, first-frame poster, click to play ------ */
   const liftCard = document.querySelector("[data-lift-video]");
-  const liftVideo = liftCard?.querySelector("video");
-  if (liftCard && liftVideo) {
-    const liftSrc =
-      liftVideo.getAttribute("data-lift-src") || "assets/lifting/index.m3u8";
-
-    if (window.Hls && Hls.isSupported()) {
-      const hls = new Hls({
-        enableWorker: true,
-        startFragPrefetch: true,
-        maxBufferLength: 8,
-      });
-      hls.loadSource(liftSrc);
-      hls.attachMedia(liftVideo);
-    } else if (liftVideo.canPlayType("application/vnd.apple.mpegurl")) {
-      liftVideo.src = liftSrc;
-    }
+  if (liftCard) {
+    const youtubeId = liftCard.dataset.youtube || "gNJg27qw7FY";
 
     const startLift = () => {
-      liftVideo.controls = true;
+      if (liftCard.classList.contains("is-playing")) return;
+      const frame = document.createElement("iframe");
+      frame.src =
+        "https://www.youtube-nocookie.com/embed/" +
+        youtubeId +
+        "?autoplay=1&rel=0&modestbranding=1&playsinline=1";
+      frame.title = "Lifting video";
+      frame.allow =
+        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      frame.setAttribute("allowfullscreen", "");
+      liftCard.appendChild(frame);
       liftCard.classList.add("is-playing");
-      const play = liftVideo.play();
-      if (play && typeof play.catch === "function") play.catch(() => {});
     };
 
-    liftCard.addEventListener("click", (event) => {
-      if (liftVideo.controls && event.target === liftVideo) return;
-      if (liftVideo.paused) startLift();
+    liftCard.addEventListener("click", () => {
+      startLift();
     });
 
     liftCard.addEventListener("keydown", (event) => {
       if (event.key === "Enter" || event.key === " ") {
         event.preventDefault();
-        if (liftVideo.paused) startLift();
-        else liftVideo.pause();
+        startLift();
       }
-    });
-
-    liftVideo.addEventListener("ended", () => {
-      liftVideo.controls = false;
-      liftVideo.currentTime = 0;
-      liftCard.classList.remove("is-playing");
     });
 
     liftCard.setAttribute("tabindex", "0");
