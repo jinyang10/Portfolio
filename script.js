@@ -139,12 +139,24 @@
   });
   applyTheme(document.documentElement.dataset.theme || "glass");
 
-  /* Fitness card: file ships with the site; keep a local browser copy ---- */
+  /* Fitness card: 1080p HLS — start after the first ~2s chunk ------------ */
   const liftCard = document.querySelector("[data-lift-video]");
   const liftVideo = liftCard?.querySelector("video");
   if (liftCard && liftVideo) {
-    const LIFT_URL = new URL("assets/lifting.mp4", window.location.href).href;
-    const LIFT_CACHE = "portfolio-lift-v1";
+    const liftSrc =
+      liftVideo.getAttribute("data-lift-src") || "assets/lifting/index.m3u8";
+
+    if (window.Hls && Hls.isSupported()) {
+      const hls = new Hls({
+        enableWorker: true,
+        startFragPrefetch: true,
+        maxBufferLength: 8,
+      });
+      hls.loadSource(liftSrc);
+      hls.attachMedia(liftVideo);
+    } else if (liftVideo.canPlayType("application/vnd.apple.mpegurl")) {
+      liftVideo.src = liftSrc;
+    }
 
     const startLift = () => {
       liftVideo.controls = true;
@@ -152,35 +164,6 @@
       const play = liftVideo.play();
       if (play && typeof play.catch === "function") play.catch(() => {});
     };
-
-    const storeLift = () => {
-      if (!("caches" in window)) return;
-      caches.open(LIFT_CACHE).then((cache) => {
-        cache.match(LIFT_URL).then((hit) => {
-          if (hit) return;
-          fetch(LIFT_URL).then((res) => {
-            if (res.ok) cache.put(LIFT_URL, res.clone());
-          });
-        });
-      });
-    };
-
-    if ("caches" in window) {
-      caches
-        .open(LIFT_CACHE)
-        .then((cache) => cache.match(LIFT_URL))
-        .then((hit) => {
-          if (!hit) return;
-          return hit.blob().then((blob) => {
-            liftVideo.querySelectorAll("source").forEach((node) => node.remove());
-            liftVideo.src = URL.createObjectURL(blob);
-            liftVideo.load();
-          });
-        })
-        .catch(() => {});
-    }
-
-    liftVideo.addEventListener("canplaythrough", storeLift, { once: true });
 
     liftCard.addEventListener("click", (event) => {
       if (liftVideo.controls && event.target === liftVideo) return;
