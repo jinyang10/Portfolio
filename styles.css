@@ -968,16 +968,6 @@ button {
   cursor: pointer;
 }
 
-.hobby-video.is-loading .hobby-play {
-  animation: hobby-play-wait 1s ease-in-out infinite;
-}
-
-@keyframes hobby-play-wait {
-  50% {
-    opacity: 0.55;
-  }
-}
-
 .hobby-play {
   position: absolute;
   top: 50%;

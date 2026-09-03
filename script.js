@@ -139,52 +139,48 @@
   });
   applyTheme(document.documentElement.dataset.theme || "glass");
 
-  /* Fitness card: original file, fetched once, then played from memory -- */
+  /* Fitness card: file ships with the site; keep a local browser copy ---- */
   const liftCard = document.querySelector("[data-lift-video]");
   const liftVideo = liftCard?.querySelector("video");
   if (liftCard && liftVideo) {
-    const LIFT_DRIVE =
-      "https://drive.usercontent.google.com/download?id=1zp6EJFPidBydo1Z2n-1pQsbhDZz-1pgO&export=download";
-    const LIFT_LOCAL = "assets/lifting.mp4";
-
-    const fetchVideoBlob = async (url) => {
-      const res = await fetch(url);
-      if (!res.ok) throw new Error("fetch");
-      const type = res.headers.get("content-type") || "";
-      if (type.includes("text/html")) throw new Error("html");
-      const blob = await res.blob();
-      if (blob.size < 1_000_000) throw new Error("tiny");
-      return blob;
-    };
-
-    const attachBlob = (blob) => {
-      liftVideo.querySelectorAll("source").forEach((node) => node.remove());
-      liftVideo.src = URL.createObjectURL(blob);
-      liftVideo.preload = "auto";
-      liftVideo.load();
-    };
-
-    liftCard.classList.add("is-loading");
-    const liftReady = fetchVideoBlob(LIFT_DRIVE)
-      .catch(() => fetchVideoBlob(LIFT_LOCAL))
-      .then((blob) => {
-        attachBlob(blob);
-        liftCard.classList.remove("is-loading");
-        liftCard.classList.add("is-ready");
-      })
-      .catch(() => {
-        liftCard.classList.remove("is-loading");
-        liftVideo.preload = "auto";
-      });
+    const LIFT_URL = new URL("assets/lifting.mp4", window.location.href).href;
+    const LIFT_CACHE = "portfolio-lift-v1";
 
     const startLift = () => {
       liftVideo.controls = true;
       liftCard.classList.add("is-playing");
-      liftReady.then(() => {
-        const play = liftVideo.play();
-        if (play && typeof play.catch === "function") play.catch(() => {});
+      const play = liftVideo.play();
+      if (play && typeof play.catch === "function") play.catch(() => {});
+    };
+
+    const storeLift = () => {
+      if (!("caches" in window)) return;
+      caches.open(LIFT_CACHE).then((cache) => {
+        cache.match(LIFT_URL).then((hit) => {
+          if (hit) return;
+          fetch(LIFT_URL).then((res) => {
+            if (res.ok) cache.put(LIFT_URL, res.clone());
+          });
+        });
       });
     };
+
+    if ("caches" in window) {
+      caches
+        .open(LIFT_CACHE)
+        .then((cache) => cache.match(LIFT_URL))
+        .then((hit) => {
+          if (!hit) return;
+          return hit.blob().then((blob) => {
+            liftVideo.querySelectorAll("source").forEach((node) => node.remove());
+            liftVideo.src = URL.createObjectURL(blob);
+            liftVideo.load();
+          });
+        })
+        .catch(() => {});
+    }
+
+    liftVideo.addEventListener("canplaythrough", storeLift, { once: true });
 
     liftCard.addEventListener("click", (event) => {
       if (liftVideo.controls && event.target === liftVideo) return;
