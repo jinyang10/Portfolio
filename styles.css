@@ -944,7 +944,8 @@ button {
 }
 
 .hobby img,
-.hobby video {
+.hobby video,
+.hobby iframe {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -952,10 +953,17 @@ button {
   transition: transform 1.2s var(--ease), filter 1.2s var(--ease);
 }
 
-.hobby video {
+.hobby video,
+.hobby iframe {
   position: absolute;
   inset: 0;
   display: block;
+}
+
+.hobby iframe {
+  border: 0;
+  z-index: 2;
+  filter: none;
 }
 
 .hobby:hover img,
@@ -1163,6 +1171,7 @@ button {
 
   .hobby img,
   .hobby video,
+  .hobby iframe,
   .project-visual img,
   .project-card,
   .btn {
