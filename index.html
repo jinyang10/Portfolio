@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="glass">
+<html lang="en" data-theme="modernist">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,19 +29,19 @@
     <!--
       Site style. Five themes are available:
         "luxury"    — warm, editorial, serif
-        "modernist" — clean lines, functional beauty, timeless
+        "modernist" — clean lines, functional beauty, timeless (default)
         "artdeco"   — elegant patterns, luxury, vintage sophistication
         "retro"     — 80s vision of the future, refined nostalgia
-        "glass"     — translucent layers, blurred backgrounds, depth (default)
+        "glass"     — translucent layers, blurred backgrounds, depth
       Visitors can switch with the Style picker in the header (saved in
       their browser). To change the DEFAULT theme, edit the fallback below.
     -->
     <script>
       (function () {
-        var theme = "glass";
+        var theme = "modernist";
         try {
-          theme = localStorage.getItem("portfolio-theme") || "glass";
-        } catch (_) {
+          theme = localStorage.getItem("portfolio-theme-v2") || "modernist";
+        } catch (_) {}
           /* storage blocked */
         }
         document.documentElement.dataset.theme = theme;
@@ -67,10 +67,10 @@
         <span class="theme-picker-label">Style</span>
         <select data-theme-select aria-label="Site style">
           <option value="luxury">Luxury</option>
-          <option value="modernist">Modernist</option>
+          <option value="modernist" selected>Modernist</option>
           <option value="artdeco">Art Deco</option>
           <option value="retro">Retro-Future</option>
-          <option value="glass" selected>Glass</option>
+          <option value="glass">Glass</option>
         </select>
       </label>
       <button
@@ -462,6 +462,6 @@
       </section>
     </main>
 
-    <script src="script.js?v=21"></script>
+    <script src="script.js?v=22"></script>
   </body>
 </html>
