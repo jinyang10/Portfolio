@@ -124,7 +124,7 @@
 
   /* Theme switching ------------------------------------------------------- */
   const themeSelect = document.querySelector("[data-theme-select]");
-  const THEME_KEY = "portfolio-theme";
+  const THEME_KEY = "portfolio-theme-v2";
   const applyTheme = (theme) => {
     document.documentElement.dataset.theme = theme;
     try {
@@ -137,7 +137,7 @@
   themeSelect?.addEventListener("change", (event) => {
     applyTheme(event.target.value);
   });
-  applyTheme(document.documentElement.dataset.theme || "glass");
+  applyTheme(document.documentElement.dataset.theme || "modernist");
 
   /* Fitness card: YouTube embed, first-frame poster, click to play ------ */
   const liftCard = document.querySelector("[data-lift-video]");
