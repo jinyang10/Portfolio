@@ -73,7 +73,8 @@
   background: rgba(20, 17, 11, 0.97);
 }
 
-[data-theme="artdeco"] .mobile-nav a {
+[data-theme="artdeco"] .mobile-nav nav a,
+[data-theme="artdeco"] .mobile-nav-links a {
   color: var(--ink);
 }
 
