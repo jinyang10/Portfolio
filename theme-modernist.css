@@ -74,10 +74,6 @@
   color: var(--ink-soft);
 }
 
-[data-theme="modernist"] .hero-links a {
-  letter-spacing: 0.12em;
-}
-
 [data-theme="modernist"] .chapter span,
 [data-theme="modernist"] .project-index,
 [data-theme="modernist"] .footer-brand,
