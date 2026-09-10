@@ -87,7 +87,8 @@
   background: rgba(16, 13, 38, 0.97);
 }
 
-[data-theme="retro"] .mobile-nav a {
+[data-theme="retro"] .mobile-nav nav a,
+[data-theme="retro"] .mobile-nav-links a {
   color: var(--ink);
 }
 

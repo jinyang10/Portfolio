@@ -264,6 +264,30 @@ button {
   letter-spacing: normal;
 }
 
+.header-links {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.header-links a {
+  display: inline-flex;
+  color: inherit;
+  opacity: 0.68;
+  transition: opacity 0.3s var(--ease), color 0.3s var(--ease);
+}
+
+.header-links a:hover {
+  opacity: 1;
+  color: var(--terra);
+}
+
+.header-links svg {
+  display: block;
+  width: 1.12rem;
+  height: 1.12rem;
+}
+
 /* Mobile menu -------------------------------------------------------- */
 .menu-toggle {
   display: none;
@@ -316,7 +340,7 @@ button {
   gap: 1.35rem;
 }
 
-.mobile-nav a {
+.mobile-nav nav a {
   display: inline-flex;
   align-items: baseline;
   gap: 0.9rem;
@@ -326,10 +350,29 @@ button {
   color: var(--ink);
 }
 
-.mobile-nav a small {
+.mobile-nav nav a small {
   font-family: var(--font-body);
   font-size: 0.7rem;
   letter-spacing: 0.2em;
+  color: var(--terra);
+}
+
+.mobile-nav-links {
+  display: flex;
+  gap: 1.4rem;
+  margin: 0;
+}
+
+.mobile-nav-links a {
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0.72;
+}
+
+.mobile-nav-links a:hover {
+  opacity: 1;
   color: var(--terra);
 }
 
@@ -387,6 +430,39 @@ button {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--ink-soft);
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.6rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0.78;
+  transition: opacity 0.3s var(--ease), color 0.3s var(--ease);
+}
+
+.hero-links a:hover {
+  opacity: 1;
+  color: var(--terra);
+}
+
+.hero-links svg {
+  display: block;
+  width: 1rem;
+  height: 1rem;
 }
 
 .hero-actions {
@@ -1199,8 +1275,12 @@ button {
     display: none;
   }
 
-  .theme-picker {
+  .header-links {
     margin-left: auto;
+  }
+
+  .theme-picker {
+    margin-left: 0;
   }
 
   .menu-toggle {
