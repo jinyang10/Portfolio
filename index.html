@@ -6,12 +6,12 @@
     <title>Jin Yang - Portfolio</title>
     <meta
       name="description"
-      content="The portfolio of Jin Yang — a third-year Computer Engineering student at York University's Lassonde School of Engineering, focused on full-stack development with AI workflows."
+      content="Jin Yang is a Computer Engineering student at York University. Explore his C systems, Verilog FPGA, Java, SQL, and web projects, and his interests in AI infrastructure and GPU computing."
     />
     <meta property="og:title" content="Jin Yang - Portfolio" />
     <meta
       property="og:description"
-      content="Third-year Computer Engineering student at York University's Lassonde School of Engineering. Full-stack development with AI workflows, built for real-world applications."
+      content="Computer Engineering student at York University building systems and applications, with interests in AI infrastructure and GPU computing."
     />
     <meta property="og:type" content="website" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E" />
@@ -150,7 +150,7 @@
               <em>Welcome to my portfolio.</em>
             </h1>
             <p class="hero-lede reveal" style="--d: 0.22s">
-              Computer Engineering Student
+              Computer Engineering student at York University · Systems and software development
             </p>
             <div class="hero-actions reveal" style="--d: 0.34s">
               <a class="btn btn-terra" href="#showcase">View my work</a>
@@ -161,10 +161,9 @@
           <aside class="hero-goals reveal" style="--d: 0.28s">
             <p class="hero-goals-label">My goals</p>
             <p>
-              I want to build things people can actually use, and contribute
-              to creating systems that make a meaningful impact. My aim is to
-              grow as an engineer who can take an idea from a sketch to
-              something that works in the real world.
+              I'm interested in the software behind GPU computing and model
+              inference. I'm learning modern C++ to build on my experience
+              with C and operating systems.
             </p>
           </aside>
         </div>
@@ -181,18 +180,14 @@
             <div class="about-copy reveal">
               <h2>Here's who I am.</h2>
               <p>
-                A highly motivated Computer Engineering student with a strong
-                foundation in object-oriented programming and fundamental
-                concepts such as data structures, algorithms, and operating
-                systems. Comfortable with Java, C, Python, SQL, Bash, and
-                Verilog, with hands-on experience from projects and coursework.
+                I've built an operating systems simulator in C, a Verilog
+                controller for the DE10-Lite FPGA, and Java applications with
+                automated tests and relational databases.
               </p>
               <p>
-                I learn by building. So far that's been desktop and terminal
-                apps; I'm now putting the same energy into web applications.
-                As a result, I'm currently learning new frameworks, libraries,
-                and tools, and working toward becoming an AWS Certified Cloud
-                Practitioner.
+                I'm also building the frontend for Luma Health with React,
+                Next.js, and TypeScript. I enjoy working through the rules
+                behind an application and testing how it behaves.
               </p>
             </div>
 
@@ -206,12 +201,12 @@
                 Computer Engineering
               </li>
               <li>
-                <span>Focused on</span>
-                Full-stack development
+                <span>Interests</span>
+                Systems software, AI infrastructure, and GPU computing
               </li>
               <li>
-                <span>Building for</span>
-                Real-world applications
+                <span>Learning</span>
+                Modern C++
               </li>
             </ul>
           </div>
@@ -229,17 +224,17 @@
           </header>
 
           <div class="project-gallery">
-            <article class="project-card project-featured project-materna reveal">
+            <article class="project-card project-featured project-shell reveal">
               <a
                 class="project-visual"
-                href="https://github.com/jinyang10/MaternaDB"
+                href="https://github.com/jinyang10/CoreShell"
                 target="_blank"
                 rel="noopener noreferrer"
                 tabindex="-1"
                 aria-hidden="true"
               >
                 <img
-                  src="assets/maternadb.jpg"
+                  src="assets/coreshell.jpg"
                   alt=""
                   loading="lazy"
                 />
@@ -250,25 +245,24 @@
                 </div>
                 <h3>
                   <a
-                    href="https://github.com/jinyang10/MaternaDB"
+                    href="https://github.com/jinyang10/CoreShell"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    MaternaDB
+                    CoreShell
                   </a>
                 </h3>
                 <p>
-                  A Java Swing app for midwives: look up appointments by
-                  date, read notes and tests, add an observation, and
-                  prescribe a test. Runs on a local SQLite file by default,
-                  or PostgreSQL if you set one up.
+                  A command-line shell in C that simulates process scheduling
+                  and demand paging. It uses ready queues and per-process page
+                  tables to run scripts and handle simulated page faults.
                 </p>
                 <p class="project-stack">
-                  Java · Swing · SQLite · SQL
+                  C · Scheduling · Paging · Memory
                 </p>
                 <a
                   class="project-link"
-                  href="https://github.com/jinyang10/MaternaDB"
+                  href="https://github.com/jinyang10/CoreShell"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -279,45 +273,82 @@
             </article>
 
             <div class="project-grid">
-              <article class="project-card project-fit project-shell reveal" style="--d: 0.08s">
-                <a
-                  class="project-visual"
-                  href="https://github.com/jinyang10/CoreShell"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  tabindex="-1"
-                  aria-hidden="true"
-                >
-                  <img
-                    src="assets/coreshell.jpg"
-                    alt=""
-                    loading="lazy"
-                  />
+              <article class="project-card project-fit reveal">
+                <a class="project-visual" href="https://github.com/jinyang10/fpga-tail-light-controller" target="_blank"
+                   rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+                  <img src="https://raw.githubusercontent.com/jinyang10/fpga-tail-light-controller/main/docs/assets/preview.png" alt="" loading="lazy" />
                 </a>
                 <div class="project-body">
                   <div class="project-topline">
                     <span class="project-index" aria-hidden="true">02</span>
                   </div>
                   <h3>
+                    <a href="https://github.com/jinyang10/fpga-tail-light-controller" target="_blank" rel="noopener noreferrer">FPGA Tail Light Controller</a>
+                  </h3>
+                  <p>A 44-step Verilog LED sequencer for the DE10-Lite FPGA. A finite-state machine controls timing and playback, and a seven-segment display shows the remaining repetitions.</p>
+                  <p class="project-stack">Verilog · DE10-Lite · Quartus</p>
+                  <a class="project-link" href="https://github.com/jinyang10/fpga-tail-light-controller" target="_blank" rel="noopener noreferrer">
+                    View project <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </article>
+
+              <article class="project-card project-fit reveal" style="grid-template-rows: 1fr">
+                <div class="project-body">
+                  <div class="project-topline">
+                    <span class="project-index" aria-hidden="true">03</span>
+                  </div>
+                  <h3>
+                    <a href="https://github.com/jinyang10/YU-Lab-Reservation" target="_blank" rel="noopener noreferrer">YU Lab Reservation</a>
+                  </h3>
+                  <p>A Java Swing app for booking lab equipment with six user roles and simulated payments. The State pattern controls which actions are allowed during a reservation, and JUnit tests cover booking rules and state transitions.</p>
+                  <p class="project-stack">Java · Swing · JUnit</p>
+                  <a class="project-link" href="https://github.com/jinyang10/YU-Lab-Reservation" target="_blank" rel="noopener noreferrer">
+                    View project <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </article>
+
+              <article class="project-card project-fit reveal">
+                <a
+                  class="project-visual"
+                  href="https://github.com/jinyang10/MaternaDB"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  tabindex="-1"
+                  aria-hidden="true"
+                >
+                  <img
+                    src="assets/maternadb.jpg"
+                    alt=""
+                    loading="lazy"
+                  />
+                </a>
+                <div class="project-body">
+                  <div class="project-topline">
+                    <span class="project-index" aria-hidden="true">04</span>
+                  </div>
+                  <h3>
                     <a
-                      href="https://github.com/jinyang10/CoreShell"
+                      href="https://github.com/jinyang10/MaternaDB"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      CoreShell
+                      MaternaDB
                     </a>
                   </h3>
                   <p>
-                    A shell in C that runs programs with paging and
-                    scheduling — FCFS, round robin, SJF, and aging. Page
-                    faults load from a backing store when frames are full.
+                    A Java Swing app for midwives: look up appointments by
+                    date, read notes and tests, add an observation, and
+                    prescribe a test. Runs on a local SQLite file by default,
+                    or PostgreSQL if you set one up.
                   </p>
                   <p class="project-stack">
-                    C · Scheduling · Paging · Memory
+                    Java · Swing · SQLite · SQL
                   </p>
                   <a
                     class="project-link"
-                    href="https://github.com/jinyang10/CoreShell"
+                    href="https://github.com/jinyang10/MaternaDB"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -337,7 +368,7 @@
                 </a>
                 <div class="project-body">
                   <div class="project-topline">
-                    <span class="project-index" aria-hidden="true">03</span>
+                    <span class="project-index" aria-hidden="true">05</span>
                   </div>
                   <h3>
                     <a href="#contact">Automated Plant Watering</a>
@@ -375,7 +406,7 @@
                 </a>
                 <div class="project-body">
                   <div class="project-topline">
-                    <span class="project-index" aria-hidden="true">04</span>
+                    <span class="project-index" aria-hidden="true">06</span>
                     <span class="project-status">
                       <i aria-hidden="true"></i>
                       In progress
@@ -391,8 +422,9 @@
                     </a>
                   </h3>
                   <p>
-                    A healthcare web app I'm still building. The homepage is
-                    in place; appointments and sign-in are next.
+                    A hospital appointment and administration platform in
+                    development. The frontend includes responsive navigation,
+                    theme switching, and reusable doctor and department cards.
                   </p>
                   <p class="project-stack">
                     Next.js · React · TypeScript
