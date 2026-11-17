@@ -6,12 +6,12 @@
     <title>Jin Yang - Portfolio</title>
     <meta
       name="description"
-      content="Jin Yang is a Computer Engineering student at York University. Explore his C systems, Verilog FPGA, Java, SQL, and web projects, and his interests in AI infrastructure and GPU computing."
+      content="Jin Yang is a Computer Engineering student at York University. Explore his C systems, Verilog FPGA, Java, SQL, and web projects, and his interests in embedded systems and accelerated computing."
     />
     <meta property="og:title" content="Jin Yang - Portfolio" />
     <meta
       property="og:description"
-      content="Computer Engineering student at York University building systems and applications, with interests in AI infrastructure and GPU computing."
+      content="Computer Engineering student at York University building systems and applications, with interests in embedded systems, AI infrastructure, and accelerated computing."
     />
     <meta property="og:type" content="website" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E" />
@@ -161,9 +161,9 @@
           <aside class="hero-goals reveal" style="--d: 0.28s">
             <p class="hero-goals-label">My goals</p>
             <p>
-              I'm interested in the software behind GPU computing and model
-              inference. I'm learning modern C++ to build on my experience
-              with C and operating systems.
+              I'm interested in how software interacts with hardware, from
+              embedded devices to the systems that run AI workloads. I'm
+              learning modern C++ to build on my C and operating systems work.
             </p>
           </aside>
         </div>
@@ -202,7 +202,7 @@
               </li>
               <li>
                 <span>Interests</span>
-                Systems software, AI infrastructure, and GPU computing
+                Systems software, AI computing, and embedded systems
               </li>
               <li>
                 <span>Learning</span>
@@ -224,6 +224,7 @@
           </header>
 
           <div class="project-gallery">
+            <h2 class="section-copy">Systems &amp; Hardware</h2>
             <article class="project-card project-featured project-shell reveal">
               <a
                 class="project-visual"
@@ -293,10 +294,44 @@
                 </div>
               </article>
 
-              <article class="project-card project-fit reveal" style="grid-template-rows: 1fr">
+              <article class="project-card project-fit project-plant reveal" style="--d: 0.16s">
+                <a class="project-visual" href="#contact" tabindex="-1" aria-hidden="true">
+                  <img
+                    src="assets/plant-watering.jpg?v=4"
+                    alt=""
+                    loading="lazy"
+                  />
+                </a>
                 <div class="project-body">
                   <div class="project-topline">
                     <span class="project-index" aria-hidden="true">03</span>
+                  </div>
+                  <h3>
+                    <a href="#contact">Automated Plant Watering</a>
+                  </h3>
+                  <p>
+                    A Java program that talks to a Grove board, reads soil
+                    moisture, and runs a pump until the soil is wet enough.
+                    Built to run over multiple days, then plot moisture vs
+                    time when you exit.
+                  </p>
+                  <p class="project-stack">
+                    Java · Firmata4j · Arduino · JFreeChart
+                  </p>
+                  <a class="project-link" href="#contact">
+                    View project
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <h2 class="section-copy">Software Engineering</h2>
+            <div class="project-grid">
+              <article class="project-card project-fit reveal" style="grid-template-rows: 1fr">
+                <div class="project-body">
+                  <div class="project-topline">
+                    <span class="project-index" aria-hidden="true">04</span>
                   </div>
                   <h3>
                     <a href="https://github.com/jinyang10/YU-Lab-Reservation" target="_blank" rel="noopener noreferrer">YU Lab Reservation</a>
@@ -326,7 +361,7 @@
                 </a>
                 <div class="project-body">
                   <div class="project-topline">
-                    <span class="project-index" aria-hidden="true">04</span>
+                    <span class="project-index" aria-hidden="true">05</span>
                   </div>
                   <h3>
                     <a
@@ -352,37 +387,6 @@
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    View project
-                    <span aria-hidden="true">↗</span>
-                  </a>
-                </div>
-              </article>
-
-              <article class="project-card project-fit project-plant reveal" style="--d: 0.16s">
-                <a class="project-visual" href="#contact" tabindex="-1" aria-hidden="true">
-                  <img
-                    src="assets/plant-watering.jpg?v=4"
-                    alt=""
-                    loading="lazy"
-                  />
-                </a>
-                <div class="project-body">
-                  <div class="project-topline">
-                    <span class="project-index" aria-hidden="true">05</span>
-                  </div>
-                  <h3>
-                    <a href="#contact">Automated Plant Watering</a>
-                  </h3>
-                  <p>
-                    A Java program that talks to a Grove board, reads soil
-                    moisture, and runs a pump until the soil is wet enough.
-                    Built to run over multiple days, then plot moisture vs
-                    time when you exit.
-                  </p>
-                  <p class="project-stack">
-                    Java · Firmata4j · Arduino · JFreeChart
-                  </p>
-                  <a class="project-link" href="#contact">
                     View project
                     <span aria-hidden="true">↗</span>
                   </a>
@@ -504,7 +508,7 @@
         <div class="section-inner contact-inner">
           <p class="chapter chapter-light reveal"><span>04</span>Contact</p>
           <h2 class="contact-title reveal" style="--d: 0.08s">
-            Looking for co-op roles for Winter and Summer 2027.
+            Looking for Summer 2027 internships.
           </h2>
           <p class="contact-copy reveal" style="--d: 0.16s">
             Email is the fastest way to reach me.
